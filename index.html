@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CoolMint Mobile Car Detailing | Pembroke Pines, FL</title>
+<meta name="description" content="CoolMint Mobile Car Detailing brings professional interior and exterior detailing to your location in Pembroke Pines and South Florida. Call (937) 303-1014.">
+<link rel="canonical" href="https://coolmintdetailing.com/">
+<meta property="og:title" content="CoolMint Mobile Car Detailing | Pembroke Pines, FL">
+<meta property="og:description" content="Professional mobile detailing that comes to you. Serving Pembroke Pines and South Florida.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"CoolMint Mobile Car Detailing","telephone":"+19373031014","address":{"@type":"PostalAddress","addressLocality":"Pembroke Pines","addressRegion":"FL","addressCountry":"US"},"openingHours":"Mo-Su 08:00-19:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"28"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --mint:#00D4C4;--mintl:#4DE8DC;--mintd:#00A896;
+  --pink:#FF6B9D;--sky:#48CAE4;--purple:#7B68EE;
+  --black:#0A0F1C;--dark:#111827;--dark2:#0D1F35;--dark3:#1A2B3C;
+  --white:#fff;--off:#F8FAFC;--grey:#F1F5F9;
+  --body:#374151;--muted:#6B7280;--border:#E2E8F0;
+  --fh:'Poppins',sans-serif;--fb:Verdana,Geneva,sans-serif
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:16px;color:var(--body);background:var(--white);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* MODAL */
+.modal-ov{position:fixed;inset:0;background:rgba(10,15,28,.78);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(5px)}
+.modal-ov.gone{display:none}
+.modal-wrap{position:relative;max-width:500px;width:100%}
+.modal-box{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.45);animation:pop .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-img{width:100%;height:230px;object-fit:cover;object-position:center}
+.modal-body{padding:2rem;text-align:center}
+.modal-body h2{font-family:var(--fh);font-size:1.4rem;font-weight:800;color:var(--black);margin-bottom:.5rem}
+.modal-body p{color:var(--muted);margin-bottom:1.5rem;font-size:.9rem;line-height:1.6}
+.modal-close{position:absolute;top:-.75rem;right:-.75rem;width:36px;height:36px;background:var(--white);border:1.5px solid var(--border);border-radius:50%;cursor:pointer;font-size:1rem;color:var(--dark);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.15);transition:background .2s}
+.modal-close:hover{background:var(--grey)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,15,28,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,212,196,.15);height:72px;display:flex;align-items:center}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:.65rem}
+.logo-icon{width:38px;height:38px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-main{font-family:var(--fh);font-weight:900;font-size:1.2rem;background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{font-family:var(--fh);font-size:.57rem;font-weight:500;color:rgba(255,255,255,.42);letter-spacing:.1em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-family:var(--fh);font-size:1rem;font-weight:500;color:rgba(255,255,255,.78);transition:color .2s}
+.nav-links a:hover{color:var(--mint)}
+.nav-cta{background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--white)!important;font-weight:700!important;padding:.6rem 1.4rem!important;border-radius:8px;box-shadow:0 3px 14px rgba(0,212,196,.3);transition:transform .2s,box-shadow .2s!important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(0,212,196,.45)!important}
+.nav-tog{display:none;background:none;border:none;cursor:pointer;padding:.4rem;flex-direction:column;gap:5px}
+.nav-tog span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:650px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.42);transform:scale(1.04)}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,15,28,.65),rgba(10,15,28,.22))}
+.hero-ct{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;padding-top:72px}
+.trust-row{display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.trust-chip{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,212,196,.1);border:1px solid rgba(0,212,196,.25);border-radius:100px;padding:.3rem .9rem;font-family:var(--fh);font-size:.78rem;font-weight:600;color:var(--mint);letter-spacing:.04em}
+.hero h1{font-family:var(--fh);font-size:clamp(2.8rem,5.5vw,65px);font-weight:900;color:var(--white);line-height:1.07;margin-bottom:1.25rem;max-width:700px}
+.hero h1 span{background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:540px;line-height:1.7;margin-bottom:2.25rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--white);font-family:var(--fh);font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:8px;letter-spacing:.03em;box-shadow:0 4px 20px rgba(0,212,196,.35);transition:transform .2s,box-shadow .2s}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,212,196,.5)}
+.btn-o{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--white);font-family:var(--fh);font-weight:600;font-size:1rem;padding:.9rem 2rem;border-radius:8px;border:1.5px solid rgba(255,255,255,.32);letter-spacing:.03em;transition:background .2s,border-color .2s}
+.btn-o:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
+.hero-ph{display:flex;align-items:center;gap:.5rem;margin-top:1.75rem;color:rgba(255,255,255,.55);font-family:var(--fh);font-size:.9rem}
+.hero-ph a{color:var(--mint);font-weight:700;font-size:1.05rem}
+
+/* QUICK REQUEST */
+.qr{background:var(--white);border-bottom:1px solid var(--border);padding:2.5rem 0;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.qr-in{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.qr-lbl{font-family:var(--fh);font-size:.72rem;font-weight:700;color:var(--mintd);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem}
+.qr-ttl{font-family:var(--fh);font-size:1.3rem;font-weight:800;color:var(--black)}
+.qr-form{display:flex;gap:.75rem;flex:1;flex-wrap:wrap}
+.qr-form input{flex:1;min-width:180px;height:52px;border:1.5px solid var(--border);border-radius:8px;padding:0 1rem;font-size:.9rem;color:var(--body);outline:none;transition:border-color .2s}
+.qr-form input:focus{border-color:var(--mint)}
+.qr-form input::placeholder{color:var(--muted)}
+.btn-send{height:52px;padding:0 2rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--white);font-family:var(--fh);font-weight:700;font-size:.95rem;border:none;border-radius:8px;cursor:pointer;letter-spacing:.06em;box-shadow:0 3px 14px rgba(0,212,196,.3);transition:transform .2s,box-shadow .2s}
+.btn-send:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(0,212,196,.42)}
+
+/* SHARED */
+.sec{padding:6rem 0}
+.ct{max-width:1200px;margin:0 auto;padding:0 2rem}
+.s-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fh);font-size:.72rem;font-weight:700;color:var(--mintd);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem}
+.s-tag::before{content:'';width:18px;height:2px;background:var(--mint);border-radius:2px;display:inline-block}
+.s-h{font-family:var(--fh);font-size:clamp(1.9rem,4vw,50px);font-weight:800;color:var(--black);line-height:1.1;margin-bottom:1rem}
+.s-h.lt{color:var(--white)}
+.s-p{font-size:1rem;color:var(--muted);line-height:1.7}
+.s-p.lt{color:rgba(255,255,255,.65)}
+
+/* SERVICES DARK */
+.svc-sec{background:var(--black);padding:6rem 0}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.svc-card{background:var(--dark3);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+.svc-card:hover{transform:translateY(-4px);border-color:rgba(0,212,196,.3);box-shadow:0 8px 32px rgba(0,212,196,.12)}
+.svc-img{width:100%;height:200px;object-fit:cover}
+.svc-bd{padding:1.5rem}
+.svc-nm{font-family:var(--fh);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.svc-ds{font-size:.84rem;color:rgba(255,255,255,.5);line-height:1.65}
+.svc-lk{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-family:var(--fh);font-size:.8rem;font-weight:600;color:var(--mint);transition:gap .2s}
+.svc-lk:hover{gap:.65rem}
+
+/* WHY */
+.why-sec{background:var(--off);padding:6rem 0}
+.why-g{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.why-img{width:100%;height:480px;object-fit:cover;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.why-pts{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem}
+.why-pt{display:flex;align-items:flex-start;gap:1rem}
+.why-ic{width:44px;height:44px;background:linear-gradient(135deg,var(--mint),var(--sky));border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(0,212,196,.25)}
+.why-tt{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--black);margin-bottom:.2rem}
+.why-ds{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* REVIEWS */
+.rev-sec{padding:6rem 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#FF6B9D 0%,#7B68EE 45%,#00D4C4 100%)}
+.rev-sec::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.07)}
+.rev-hd{text-align:center;margin-bottom:3rem;position:relative;z-index:2}
+.g-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:100px;padding:.4rem 1.25rem;font-family:var(--fh);font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:1rem}
+.rev-car{position:relative;z-index:2;overflow:hidden}
+.rev-trk{display:flex;gap:1.5rem;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.rev-c{flex:0 0 calc(33.333% - 1rem);background:var(--white);border-radius:16px;padding:1.75rem;box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.rev-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.rev-usr{display:flex;align-items:center;gap:.75rem}
+.rev-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--white);flex-shrink:0}
+.rev-nm{font-family:var(--fh);font-weight:700;font-size:.9rem;color:var(--black)}
+.rev-st{color:#FACC15;font-size:.85rem;letter-spacing:.05em;margin-top:.15rem}
+.rev-tx{font-size:.84rem;color:var(--body);line-height:1.65}
+.g-ico{width:24px;height:24px;flex-shrink:0}
+.rev-nav{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2.5rem;position:relative;z-index:2}
+.rev-btn{width:48px;height:48px;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.35);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2rem;transition:background .2s}
+.rev-btn:hover{background:rgba(255,255,255,.32)}
+.rev-all{font-family:var(--fh);font-weight:600;font-size:.9rem;color:var(--white);background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);padding:.6rem 1.5rem;border-radius:100px;transition:background .2s}
+.rev-all:hover{background:rgba(255,255,255,.25)}
+
+/* GALLERY */
+.gal-sec{background:var(--dark);padding:6rem 0}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
+.gal-it{overflow:hidden;border-radius:10px;aspect-ratio:4/3}
+.gal-it img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal-it:hover img{transform:scale(1.06)}
+
+/* AREAS */
+.ar-sec{background:var(--off);padding:6rem 0}
+.ar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:2.5rem}
+.ar-chip{background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:.9rem 1rem;text-align:center;font-family:var(--fh);font-size:.9rem;font-weight:600;color:var(--body);transition:border-color .2s,color .2s}
+.ar-chip:hover{border-color:var(--mint);color:var(--mintd)}
+
+/* CTA */
+.cta-sec{background:linear-gradient(160deg,var(--black),var(--dark2));padding:5rem 0;text-align:center}
+
+/* FOOTER */
+footer{background:var(--black);padding:4rem 0 2rem;border-top:1px solid rgba(0,212,196,.1)}
+.ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-ab p{font-size:.875rem;color:rgba(255,255,255,.42);line-height:1.7;margin-top:1rem}
+.ft-h{font-family:var(--fh);font-size:.68rem;font-weight:700;color:var(--mint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.ft-ul a{font-family:var(--fh);font-size:.875rem;color:rgba(255,255,255,.48);transition:color .2s}
+.ft-ul a:hover{color:var(--mint)}
+.ft-inf{font-family:var(--fh);font-size:.875rem;color:rgba(255,255,255,.4);line-height:2.1}
+.ft-inf a{color:rgba(255,255,255,.52);display:block;transition:color .2s}
+.ft-inf a:hover{color:var(--mint)}
+.ft-bt{border-top:1px solid rgba(255,255,255,.06);padding-top:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-cp{font-family:var(--fh);font-size:.78rem;color:rgba(255,255,255,.28)}
+
+@media(max-width:1024px){.svc-grid{grid-template-columns:repeat(2,1fr)}.ft-g{grid-template-columns:1fr 1fr}.why-g{grid-template-columns:1fr}.why-img{height:300px}.rev-c{flex:0 0 calc(50% - .75rem)}}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:rgba(10,15,28,.98);flex-direction:column;padding:1.5rem 2rem;gap:1.25rem}.nav-links.open{display:flex}.nav-tog{display:flex}.svc-grid{grid-template-columns:1fr}.ar-grid{grid-template-columns:repeat(2,1fr)}.gal-grid{grid-template-columns:repeat(2,1fr)}.rev-c{flex:0 0 100%}.qr-in{flex-direction:column;align-items:flex-start}.ft-g{grid-template-columns:1fr}.hero h1{font-size:clamp(2.2rem,8vw,3.5rem)}}
+</style>
+</head>
+<body>
+
+<!-- MODAL -->
+<div class="modal-ov" id="modal">
+  <div class="modal-wrap">
+    <div class="modal-box">
+      <img class="modal-img" src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=600&h=280&q=80" alt="CoolMint Mobile Car Detailing">
+      <div class="modal-body">
+        <h2>Welcome to CoolMint Mobile Car Detailing!</h2>
+        <p>Professional detailing brought right to your location in Pembroke Pines and South Florida. Call now to book your detail.</p>
+        <a href="tel:9373031014" class="btn-p" style="display:inline-flex;justify-content:center">CALL NOW TO BOOK</a>
+      </div>
+    </div>
+    <button class="modal-close" id="mClose" aria-label="Close">&#x2715;</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
+        <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="url(#lg1)" opacity=".12"/>
+        <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="none" stroke="url(#lg1)" stroke-width="1.5"/>
+        <path d="M20 11C14 17.5 14 21.5 14 21.5A6 6 0 0020 27.5A6 6 0 0026 21.5C26 21.5 26 17.5 20 11Z" fill="url(#lg1)"/>
+        <circle cx="13" cy="13" r="1.5" fill="#00D4C4" opacity=".7"/>
+        <circle cx="27" cy="12" r="1" fill="#48CAE4" opacity=".7"/>
+      </svg>
+      <div class="logo-text"><span class="logo-main">CoolMint</span><span class="logo-sub">Mobile Detailing</span></div>
+    </a>
+    <ul class="nav-links" id="nLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="service-areas.html">Service Areas</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="tel:9373031014" class="nav-cta">Call Now</a></li>
+    </ul>
+    <button class="nav-tog" id="nTog" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-ct">
+    <div class="trust-row">
+      <div class="trust-chip">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5.0 Stars on Google
+      </div>
+      <div class="trust-chip">28 Verified Reviews</div>
+      <div class="trust-chip">We Come To You</div>
+    </div>
+    <h1>Premium Mobile<br>Detailing That<br><span>Comes To You</span></h1>
+    <p>CoolMint Mobile Car Detailing brings professional interior and exterior detailing straight to your driveway, job, or anywhere in Pembroke Pines and South Florida.</p>
+    <div class="hero-btns">
+      <a href="tel:9373031014" class="btn-p">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now
+      </a>
+      <a href="services.html" class="btn-o">View Services</a>
+    </div>
+    <div class="hero-ph">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Direct line:&nbsp;<a href="tel:9373031014">(937) 303-1014</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK REQUEST -->
+<section class="qr">
+  <div class="qr-in">
+    <div><div class="qr-lbl">Quick Service Request</div><div class="qr-ttl">Want us to contact you?</div></div>
+    <form class="qr-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Enter your full name" required>
+      <input type="tel" name="phone" placeholder="Phone number" required>
+      <button type="submit" class="btn-send">SEND</button>
+    </form>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-sec">
+  <div class="ct">
+    <div class="s-tag" style="color:var(--mint)">Our Services</div>
+    <h2 class="s-h lt">Superior Mobile<br>Detailing Services</h2>
+    <p class="s-p lt" style="max-width:560px">From a quick interior refresh to a full exterior reset, CoolMint brings professional detailing directly to your door.</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=250&q=80" alt="Interior Detailing">
+        <div class="svc-bd">
+          <div class="svc-nm">Interior Detailing</div>
+          <p class="svc-ds">Deep cleaning of seats, carpets, floor mats, door panels, console, vents, and all interior surfaces for a spotless cabin.</p>
+          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&h=250&q=80" alt="Exterior Detailing">
+        <div class="svc-bd">
+          <div class="svc-nm">Exterior Detailing</div>
+          <p class="svc-ds">Hand wash, wheel and tire cleaning, tire shine, exterior glass, and a full refresh that makes your paint look sharp and clean.</p>
+          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&h=250&q=80" alt="Full Detail Package">
+        <div class="svc-bd">
+          <div class="svc-nm">Full Detail Package</div>
+          <p class="svc-ds">Complete interior and exterior service combined. The full reset for customers who want their vehicle looking its absolute best.</p>
+          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&h=250&q=80" alt="Maintenance Detail">
+        <div class="svc-bd">
+          <div class="svc-nm">Maintenance Detail</div>
+          <p class="svc-ds">A recurring light detail to keep your vehicle clean and fresh between deep cleans. Perfect for busy drivers who want to stay on top of it.</p>
+          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY COOLMINT -->
+<section class="why-sec">
+  <div class="ct">
+    <div class="why-g">
+      <img class="why-img" src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=700&h=600&q=80" alt="CoolMint Detailing Work">
+      <div>
+        <div class="s-tag">Why CoolMint</div>
+        <h2 class="s-h">Why Drivers<br>Choose CoolMint</h2>
+        <p class="s-p">Sebastian and the CoolMint team are built around one thing: showing up, doing the work right, and leaving every vehicle spotless.</p>
+        <div class="why-pts">
+          <div class="why-pt">
+            <div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg></div>
+            <div><div class="why-tt">Mobile Service &mdash; We Come To You</div><p class="why-ds">No driving to a shop. We bring professional detailing straight to your home, job, or any location you choose.</p></div>
+          </div>
+          <div class="why-pt">
+            <div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div><div class="why-tt">Exceptional Attention to Detail</div><p class="why-ds">Every corner, every surface. CoolMint does not rush. We do not leave until the work is done right.</p></div>
+          </div>
+          <div class="why-pt">
+            <div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="why-tt">On-Time, Every Appointment</div><p class="why-ds">We show up when we say we will. No waiting, no guessing. Reliable scheduling you can count on.</p></div>
+          </div>
+          <div class="why-pt">
+            <div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <div><div class="why-tt">Clear Communication</div><p class="why-ds">Easy to reach, quick to respond. You will always know what is happening from booking to completion.</p></div>
+          </div>
+          <div class="why-pt">
+            <div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><div class="why-tt">Spotless Results, Every Time</div><p class="why-ds">28 five-star Google reviews. Customers keep booking again because the results speak for themselves.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev-sec">
+  <div class="ct">
+    <div class="rev-hd">
+      <div class="g-badge">
+        <svg class="g-ico" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Reviews &middot; 5.0 &middot; 28 Reviews
+      </div>
+      <h2 class="s-h lt">Our Success Stories</h2>
+      <p class="s-p lt" style="max-width:560px;margin:0 auto">Real drivers. Real results. See what customers across South Florida are saying about CoolMint.</p>
+    </div>
+    <div class="rev-car"><div class="rev-trk" id="rTrk"></div></div>
+    <div class="rev-nav">
+      <button class="rev-btn" id="rPrev">&#8592;</button>
+      <a href="reviews.html" class="rev-all">See All 28 Reviews</a>
+      <button class="rev-btn" id="rNext">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal-sec">
+  <div class="ct">
+    <div class="s-tag" style="color:var(--mint)">Our Work</div>
+    <h2 class="s-h lt">Detailing Results</h2>
+    <p class="s-p lt" style="max-width:540px">Real vehicles, real results. Every job reflects the level of care CoolMint brings to every detail.</p>
+    <div class="gal-grid">
+      <div class="gal-it"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&h=450&q=80" alt="Car exterior detail"></div>
+      <div class="gal-it"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=450&q=80" alt="Car interior clean"></div>
+      <div class="gal-it"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&h=450&q=80" alt="Polished vehicle"></div>
+      <div class="gal-it"><img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=600&h=450&q=80" alt="Detail work close up"></div>
+      <div class="gal-it"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&h=450&q=80" alt="Exterior hand wash"></div>
+      <div class="gal-it"><img src="https://images.unsplash.com/photo-1567446003-c85ca0fef0bb?auto=format&fit=crop&w=600&h=450&q=80" alt="Paint surface care"></div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="ar-sec">
+  <div class="ct">
+    <div style="text-align:center">
+      <div class="s-tag" style="justify-content:center">Service Areas</div>
+      <h2 class="s-h" style="text-align:center">Serving Pembroke Pines<br>&amp; Surrounding Areas</h2>
+      <p class="s-p" style="text-align:center;max-width:520px;margin:0 auto 2.5rem">CoolMint Mobile Car Detailing provides convenient on-location detailing across South Florida.</p>
+    </div>
+    <div class="ar-grid">
+      <div class="ar-chip">Pembroke Pines</div><div class="ar-chip">Miramar</div>
+      <div class="ar-chip">Hollywood</div><div class="ar-chip">Weston</div>
+      <div class="ar-chip">Cooper City</div><div class="ar-chip">Davie</div>
+      <div class="ar-chip">Sunrise</div><div class="ar-chip">Plantation</div>
+      <div class="ar-chip">Dania Beach</div><div class="ar-chip">Hallandale Beach</div>
+      <div class="ar-chip">Hialeah</div><div class="ar-chip">Miami Gardens</div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem"><a href="service-areas.html" class="btn-p" style="display:inline-flex">View Full Coverage Area</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="ct">
+    <div class="s-tag" style="justify-content:center;color:var(--mint)">Book Today</div>
+    <h2 class="s-h lt" style="text-align:center">Ready To Get Your Car<br>Looking Fresh Again?</h2>
+    <p class="s-p lt" style="text-align:center;max-width:500px;margin:1rem auto 2.5rem">Call or text Sebastian directly to ask about availability, packages, and mobile detailing near you.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="tel:9373031014" class="btn-p">Call Sebastian</a>
+      <a href="sms:9373031014" class="btn-o">Text Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ct">
+    <div class="ft-g">
+      <div class="ft-ab">
+        <a href="index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="lg2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs><path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="none" stroke="url(#lg2)" stroke-width="1.5"/><path d="M20 11C14 17.5 14 21.5 14 21.5A6 6 0 0020 27.5A6 6 0 0026 21.5C26 21.5 26 17.5 20 11Z" fill="url(#lg2)"/><circle cx="13" cy="13" r="1.5" fill="#00D4C4" opacity=".7"/><circle cx="27" cy="12" r="1" fill="#48CAE4" opacity=".7"/></svg>
+          <div class="logo-text"><span class="logo-main">CoolMint</span><span class="logo-sub">Mobile Detailing</span></div>
+        </a>
+        <p>Professional mobile car detailing serving Pembroke Pines and South Florida. We come to you and leave your vehicle spotless every time.</p>
+      </div>
+      <div><div class="ft-h">Navigation</div><ul class="ft-ul"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="ft-h">Services</div><ul class="ft-ul"><li><a href="services.html">Interior Detailing</a></li><li><a href="services.html">Exterior Detailing</a></li><li><a href="services.html">Full Detail Package</a></li><li><a href="services.html">Maintenance Detail</a></li></ul></div>
+      <div><div class="ft-h">Contact</div><div class="ft-inf"><a href="tel:9373031014">(937) 303-1014</a><a href="sms:9373031014">Text Us</a><div>Pembroke Pines, FL</div><div>Mon &ndash; Sun &middot; 8am &ndash; 7pm</div></div></div>
+    </div>
+    <div class="ft-bt"><p class="ft-cp">&copy; 2025 CoolMint Mobile Car Detailing. All rights reserved.</p><p class="ft-cp">Serving Pembroke Pines, FL &amp; South Florida</p></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+const RV=[
+  {n:"Maria G.",c:"#E91E8C",t:"Sebastian was amazing. Came right to my driveway and my car has never looked this clean. Truly professional service and I will be booking again every month."},
+  {n:"Carlos R.",c:"#3F51B5",t:"Booked CoolMint for a full interior detail and was completely blown away. Every corner was spotless, the seats looked brand new. Will absolutely book again."},
+  {n:"Jessica T.",c:"#009688",t:"Five stars is not enough. Shows up on time, communicates well, and the results speak for themselves. My Cadillac looks incredible after every visit."},
+  {n:"Michael S.",c:"#FF5722",t:"Great attention to detail on my truck. He got stains out I thought were permanent. Highly recommend CoolMint to anyone in South Florida."},
+  {n:"Diane W.",c:"#673AB7",t:"I had him detail my SUV before a road trip and it looked showroom fresh when he was done. Very professional and reliable from start to finish."},
+  {n:"Anthony M.",c:"#F44336",t:"Best mobile detailing I have had in South Florida. Sebastian treated my car like it was his own. Spotless results from start to finish every single time."},
+  {n:"Jennifer L.",c:"#00BCD4",t:"Came to my job while I was at work and had the car ready by the time I got off. Super convenient and the quality of work was outstanding."},
+  {n:"Robert K.",c:"#4CAF50",t:"My Audi looked like it just came off the showroom floor after Sebastian was done. Incredible job. Worth every penny and already referred three people."},
+  {n:"Sandra P.",c:"#FF9800",t:"Finally a detailer who actually communicates and shows up when they say they will. My car was a disaster inside and now it is absolutely perfect."},
+  {n:"Kevin H.",c:"#2196F3",t:"CoolMint did my Chevy Silverado inside and out. The attention to detail is truly unmatched in this area. Already booked again for next month."},
+  {n:"Lisa F.",c:"#E91E63",t:"Great experience from start to finish. Easy to book, showed up on time, fantastic clean results. Five stars every single time without question."},
+  {n:"Marcus B.",c:"#607D8B",t:"Had my whole family's cars done back to back. Every single one came out perfect. Sebastian is a hard worker who takes real pride in his craft."},
+  {n:"Tamara J.",c:"#9C27B0",t:"I was skeptical at first but after seeing the results I am a customer for life. The interior looks completely brand new. Truly impressive work."},
+  {n:"David C.",c:"#795548",t:"Professional, quick, and thorough. He did not miss a single spot. My car smells amazing and looks even better. Excellent service all around."},
+  {n:"Nicole A.",c:"#3F51B5",t:"Came highly recommended and did not disappoint at all. My car went from a complete disaster to showroom condition in just a few hours."},
+  {n:"Chris V.",c:"#009688",t:"The best money I have spent on my car in years. Showed up on time, communicated throughout the whole process, and the results were incredible."},
+  {n:"Patricia M.",c:"#FF5722",t:"Sebastian is extremely professional and detail-oriented. My Cadillac Escalade has never looked this clean in all the years I have owned it."},
+  {n:"James H.",c:"#673AB7",t:"Quick response, easy booking, and outstanding results every time. My white car shines like new again. Definitely a repeat customer going forward."},
+  {n:"Vanessa R.",c:"#F44336",t:"I had stains all over my seats from my kids and CoolMint got every single one out. I am truly amazed and will absolutely recommend to everyone I know."},
+  {n:"Eric D.",c:"#4CAF50",t:"Mobile detailing is so convenient and CoolMint makes it even better with their quality and professionalism. Gave my car a total fresh reset."},
+  {n:"Carmen S.",c:"#FF9800",t:"Booked for a maintenance detail and was surprised by how thorough it was. Not a single speck of dirt anywhere. Absolutely perfect clean."},
+  {n:"Brian T.",c:"#00BCD4",t:"Sebastian took great care of my Audi. Every detail was attended to with care and true professionalism. Fantastic service at a fair price."},
+  {n:"Michelle O.",c:"#E91E63",t:"Had my car detailed before selling it and the buyer could not believe how clean it was. CoolMint honestly helped me get a better price on the sale."},
+  {n:"Jordan W.",c:"#2196F3",t:"Great communication before, during, and after every appointment. My car always looks amazing. Already referred three friends who are now regulars."},
+  {n:"Stephanie G.",c:"#9C27B0",t:"The interior deep clean was absolutely incredible. I did not think my car could ever look like that again. Very happy customer who will be back soon."},
+  {n:"Tony F.",c:"#607D8B",t:"On time, professional, and the results were better than I expected every time. Highly recommend CoolMint to anyone looking for quality mobile detailing."},
+  {n:"Rachel N.",c:"#795548",t:"Easy to schedule, came right to my house, and did an outstanding job on my SUV. It looked brand new inside and out when he was finished."},
+  {n:"Victor L.",c:"#E91E8C",t:"Best detailing experience I have had in South Florida. Sebastian is clearly passionate about his work and it shows in every single result. Book him now."}
+];
+const GS=`<svg class="g-ico" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>`;
+const trk=document.getElementById('rTrk');
+RV.forEach(r=>{trk.innerHTML+=`<div class="rev-c"><div class="rev-top"><div class="rev-usr"><div class="rev-av" style="background:${r.c}">${r.n.charAt(0)}</div><div><div class="rev-nm">${r.n}</div><div class="rev-st">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>${GS}</div><p class="rev-tx">${r.t}</p></div>`;});
+let ri=0;
+const cpv=()=>window.innerWidth<768?1:window.innerWidth<1024?2:3;
+const shift=()=>{const w=(trk.children[0]?.offsetWidth||0)+24;trk.style.transform=`translateX(-${ri*w}px)`;};
+document.getElementById('rNext').onclick=()=>{if(ri<RV.length-cpv()){ri++;shift();}};
+document.getElementById('rPrev').onclick=()=>{if(ri>0){ri--;shift();}};
+window.addEventListener('resize',()=>{ri=0;shift();});
+document.getElementById('mClose').onclick=()=>document.getElementById('modal').classList.add('gone');
+document.getElementById('modal').onclick=e=>{if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.add('gone');};
+document.getElementById('nTog').onclick=()=>document.getElementById('nLinks').classList.toggle('open');
+const lenis=new Lenis({lerp:.08,smooth:true});
+(function raf(t){lenis.raf(t);requestAnimationFrame(raf);})(0);
+gsap.registerPlugin(ScrollTrigger);
+gsap.from('.trust-row',{opacity:0,y:16,duration:.7,delay:.3});
+gsap.from('.hero h1',{opacity:0,y:30,duration:.85,delay:.5});
+gsap.from('.hero p',{opacity:0,y:18,duration:.75,delay:.7});
+gsap.from('.hero-btns',{opacity:0,y:16,duration:.7,delay:.9});
+gsap.utils.toArray('.svc-card').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 85%'},opacity:0,y:34,duration:.6,delay:i*.08}));
+gsap.utils.toArray('.why-pt').forEach((p,i)=>gsap.from(p,{scrollTrigger:{trigger:p,start:'top 88%'},opacity:0,x:-20,duration:.55,delay:i*.07}));
+gsap.utils.toArray('.ar-chip').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 90%'},opacity:0,y:12,duration:.45,delay:i*.035}));
+gsap.from('.gal-it',{scrollTrigger:{trigger:'.gal-grid',start:'top 80%'},opacity:0,y:26,duration:.55,stagger:.09});
+</script>
+</body>
+</html>
