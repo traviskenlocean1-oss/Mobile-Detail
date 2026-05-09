@@ -6,261 +6,294 @@
 <title>Contact | CoolMint Mobile Car Detailing — Pembroke Pines FL</title>
 <meta name="description" content="Book mobile car detailing in Pembroke Pines FL. Call, text, or fill out the form — CoolMint Mobile Detailing will get back to you fast.">
 <meta property="og:title" content="Contact | CoolMint Mobile Car Detailing">
-<meta property="og:description" content="Book your mobile car detail in Pembroke Pines FL. Call (937) 303-1014 or send a message.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://coolmintdetail.com/contact.html">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"CoolMint Mobile Car Detailing","telephone":"(937) 303-1014","address":{"@type":"PostalAddress","addressLocality":"Pembroke Pines","addressRegion":"FL","addressCountry":"US"},"openingHours":"Mo-Su 07:00-19:00","contactPoint":{"@type":"ContactPoint","telephone":"(937) 303-1014","contactType":"customer service"}}</script>
+<link rel="canonical" href="https://coolmintdetailing.com/contact.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"CoolMint Mobile Car Detailing","telephone":"(937) 303-1014","address":{"@type":"PostalAddress","addressLocality":"Pembroke Pines","addressRegion":"FL","addressCountry":"US"},"openingHours":"Mo-Su 07:00-19:00"}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js" defer></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --mint:#00D4C4;--mintl:#4DE8DC;--mintd:#00A896;
-  --pink:#FF6B9D;--sky:#48CAE4;--purple:#7B68EE;
-  --black:#0A0F1C;--dark:#111827;--dark2:#0D1F35;--dark3:#1A2B3C;
-  --white:#fff;--off:#F8FAFC;--grey:#F1F5F9;
-  --body:#374151;--muted:#6B7280;--border:#E2E8F0;
-  --fh:'Poppins',sans-serif;--fb:Verdana,Geneva,sans-serif
+  --mint:#00D4C4;--mintd:#00A896;--sky:#48CAE4;
+  --pink:#FF6B9D;
+  --black:#000;--dark:#080808;--dark2:#0d0d0d;--dark3:#111;
+  --white:#fff;--border:rgba(255,255,255,.08);
+  --fh:'Poppins',sans-serif
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--fb);color:var(--body);background:var(--white);overflow-x:hidden}
+body{font-family:var(--fh);font-size:17px;color:rgba(255,255,255,.72);background:var(--black);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;background:rgba(10,15,28,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,212,196,.15);transition:background .3s}
-nav.scrolled{background:rgba(10,15,28,.98)}
-.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:36px;height:36px;flex-shrink:0}
-.brand-text{font-family:var(--fh);font-weight:800;font-size:1.1rem;line-height:1.1;color:var(--white)}
-.brand-text span{color:var(--mint);display:block;font-size:.7rem;font-weight:500;letter-spacing:.05em}
-.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-.nav-links a{font-family:var(--fh);font-size:.85rem;font-weight:500;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--mint)}
-.nav-cta{background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--black)!important;font-weight:700!important;padding:8px 18px;border-radius:6px;transition:opacity .2s,transform .2s}
-.nav-cta:hover{opacity:.9;transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
-.mob-menu{display:none;flex-direction:column;background:var(--black);border-top:1px solid rgba(0,212,196,.15);padding:1rem 5%}
-.mob-menu a{font-family:var(--fh);font-size:.95rem;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.mob-menu a:hover{color:var(--mint)}
-.mob-menu.open{display:flex}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);height:80px;display:flex;align-items:center}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 2.5rem;width:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.logo{display:flex;align-items:center;gap:.85rem}
+.logo-icon{width:54px;height:54px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-main{font-weight:900;font-size:1.5rem;background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{font-size:.58rem;font-weight:500;color:rgba(255,255,255,.35);letter-spacing:.13em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links>li{position:relative}
+.nav-links a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.7);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-links a.active{color:var(--mint)}
+.drop-wrap{cursor:default}
+.drop-lbl{display:flex;align-items:center;gap:.3rem;font-size:1rem;font-weight:500;color:rgba(255,255,255,.7);transition:color .2s}
+.drop-lbl:hover{color:#fff}
+.drop-arr{font-size:.65rem;opacity:.5;transition:transform .2s}
+.drop-wrap:hover .drop-arr{transform:rotate(180deg)}
+.nav-drop{position:absolute;top:calc(100% + 14px);left:-1rem;background:rgba(4,4,4,.97);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:.5rem 0;min-width:220px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 20px 50px rgba(0,0,0,.7)}
+.drop-wrap:hover .nav-drop{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-drop a{display:block;padding:.55rem 1.3rem;font-size:.88rem;font-weight:500;color:rgba(255,255,255,.6);transition:color .15s,background .15s}
+.nav-drop a:hover{color:var(--mint);background:rgba(0,212,196,.06)}
+.nav-right{display:flex;align-items:center;gap:1.25rem}
+.nav-socials{display:flex;align-items:center;gap:.6rem}
+.soc-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);transition:background .2s,border-color .2s,transform .18s}
+.soc-ic:hover{transform:translateY(-2px)}
+.soc-ic.ig:hover{background:rgba(225,48,108,.2);border-color:rgba(225,48,108,.45)}
+.soc-ic.fb:hover{background:rgba(24,119,242,.2);border-color:rgba(24,119,242,.45)}
+.soc-ic.wa:hover{background:rgba(37,211,102,.2);border-color:rgba(37,211,102,.45)}
+.nav-cta{background:linear-gradient(135deg,var(--mint),var(--sky));color:#000!important;font-weight:700!important;font-size:.92rem!important;padding:.65rem 1.6rem!important;border-radius:2px;letter-spacing:.04em;box-shadow:0 3px 16px rgba(0,212,196,.28);transition:transform .2s,box-shadow .2s!important;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 5px 22px rgba(0,212,196,.45)!important}
+.nav-tog{display:none;background:none;border:none;cursor:pointer;padding:.4rem;flex-direction:column;gap:5px}
+.nav-tog span{display:block;width:26px;height:2px;background:rgba(255,255,255,.8);border-radius:1px}
 
-.page-hero{padding:140px 5% 80px;background:linear-gradient(160deg,var(--black),var(--dark2));text-align:center;position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(0,212,196,.08),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(72,202,228,.06),transparent 50%);pointer-events:none}
-.page-hero>*{position:relative}
-.sec-label{font-family:var(--fh);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
-.page-hero h1{font-family:var(--fh);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--white);line-height:1.15;margin-bottom:1rem}
+/* PAGE HERO */
+.page-hero{position:relative;padding:160px 2.5rem 90px;text-align:center;overflow:hidden;background:var(--black)}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 50% 100%,rgba(0,212,196,.1) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 15% 20%,rgba(255,107,157,.08) 0%,transparent 55%)}
+.page-hero>*{position:relative;z-index:2}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;color:var(--mint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.9rem}
+.ph-tag::before{content:'';width:18px;height:2px;background:currentColor;border-radius:2px;display:inline-block}
+.page-hero h1{font-size:clamp(2.6rem,5vw,64px);font-weight:900;color:#fff;line-height:1.07;margin-bottom:1.25rem}
 .page-hero h1 span{background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:540px;margin:0 auto;line-height:1.8}
+.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.58);max-width:520px;margin:0 auto;line-height:1.78}
 
-.contact-section{background:var(--off);padding:80px 5%}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto;align-items:start}
+/* SHARED */
+.ct{max-width:1280px;margin:0 auto;padding:0 2.5rem}
+.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:#000;font-weight:800;font-size:1.05rem;padding:1rem 2.2rem;border-radius:2px;letter-spacing:.04em;box-shadow:0 4px 22px rgba(0,212,196,.3);transition:transform .2s,box-shadow .2s}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 7px 30px rgba(0,212,196,.5)}
 
-.contact-form-wrap{background:var(--white);border-radius:20px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,.08)}
-.form-title{font-family:var(--fh);font-size:1.5rem;font-weight:800;color:var(--black);margin-bottom:.4rem}
-.form-sub{font-size:.88rem;color:var(--muted);font-family:var(--fb);line-height:1.6;margin-bottom:1.75rem}
+/* CONTACT SECTION — FROSTED GLASS OVER PHOTO */
+.contact-sec{position:relative;padding:7rem 0;overflow:hidden}
+.contact-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.18)}
+.contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+
+/* FORM — GLASS */
+.form-glass{background:rgba(0,0,0,.65);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:2.75rem}
+.form-title{font-size:1.55rem;font-weight:800;color:#fff;margin-bottom:.4rem}
+.form-sub{font-size:.9rem;color:rgba(255,255,255,.48);line-height:1.65;margin-bottom:1.85rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
 .form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
-.form-group label{font-family:var(--fh);font-size:.8rem;font-weight:600;color:var(--black);letter-spacing:.02em}
+.form-group label{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.65);letter-spacing:.02em}
 .form-group input,
 .form-group select,
-.form-group textarea{padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--fb);font-size:.88rem;color:var(--body);outline:none;transition:border-color .2s,box-shadow .2s;background:var(--off)}
+.form-group textarea{padding:.8rem 1rem;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:2px;font-family:var(--fh);font-size:.9rem;color:#fff;outline:none;transition:border-color .2s}
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus{border-color:var(--mint);box-shadow:0 0 0 3px rgba(0,212,196,.1);background:var(--white)}
+.form-group textarea:focus{border-color:var(--mint)}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:rgba(255,255,255,.3)}
 .form-group textarea{resize:vertical;min-height:110px;line-height:1.6}
-.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
-.form-submit{width:100%;background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--black);font-family:var(--fh);font-weight:700;font-size:1rem;padding:14px 28px;border:none;border-radius:10px;cursor:pointer;transition:.25s;letter-spacing:.02em}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,.4)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
+.form-group select option{background:#111;color:#fff}
+.form-submit{width:100%;background:linear-gradient(135deg,var(--mint),var(--sky));color:#000;font-family:var(--fh);font-weight:800;font-size:1rem;padding:.95rem 2rem;border:none;border-radius:2px;cursor:pointer;transition:transform .2s,box-shadow .2s;letter-spacing:.04em}
 .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,212,196,.35)}
 
-.contact-info{display:flex;flex-direction:column;gap:1.25rem}
-.info-card{background:var(--white);border-radius:16px;padding:1.5rem 1.75rem;box-shadow:0 4px 20px rgba(0,0,0,.06);display:flex;align-items:flex-start;gap:1rem;transition:transform .3s}
-.info-card:hover{transform:translateY(-3px)}
-.info-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,rgba(0,212,196,.12),rgba(72,202,228,.08));display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.info-label{font-family:var(--fh);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.25rem}
-.info-value{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--black)}
-.info-value a{color:var(--black);text-decoration:none;transition:color .2s}
+/* INFO SIDE */
+.contact-info{display:flex;flex-direction:column;gap:1.1rem}
+.info-glass{background:rgba(0,0,0,.65);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.09);border-radius:4px;padding:1.5rem 1.75rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color .2s}
+.info-glass:hover{border-color:rgba(0,212,196,.25)}
+.info-icon{width:46px;height:46px;border-radius:3px;background:linear-gradient(135deg,rgba(0,212,196,.15),rgba(72,202,228,.08));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-label{font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.3rem}
+.info-value{font-size:1.05rem;font-weight:700;color:#fff}
+.info-value a{color:#fff;transition:color .2s}
 .info-value a:hover{color:var(--mint)}
-.info-note{font-size:.8rem;color:var(--muted);font-family:var(--fb);margin-top:.2rem;line-height:1.5}
+.info-note{font-size:.82rem;color:rgba(255,255,255,.42);margin-top:.2rem;line-height:1.55}
 
-.hours-card{background:var(--dark);border-radius:16px;padding:1.75rem;box-shadow:0 4px 20px rgba(0,0,0,.15)}
-.hours-title{font-family:var(--fh);font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.hours-glass{background:rgba(0,0,0,.65);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.09);border-radius:4px;padding:1.75rem}
+.hours-title{font-weight:700;font-size:.95rem;color:#fff;margin-bottom:1.1rem;display:flex;align-items:center;gap:.65rem}
 .hours-dot{width:8px;height:8px;border-radius:50%;background:var(--mint)}
-.hours-row{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:.48rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
 .hours-row:last-child{border-bottom:none}
-.hours-day{font-family:var(--fh);font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7)}
-.hours-time{font-family:var(--fh);font-size:.82rem;font-weight:600;color:var(--mint)}
+.hours-day{font-size:.85rem;font-weight:500;color:rgba(255,255,255,.62)}
+.hours-time{font-size:.85rem;font-weight:600;color:var(--mint)}
 
-.cta-section{background:linear-gradient(135deg,var(--mint),var(--sky),var(--purple));padding:80px 5%;text-align:center}
-.cta-section h2{font-family:var(--fh);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:var(--black);margin-bottom:.75rem}
-.cta-section p{font-size:1rem;color:rgba(0,0,0,.7);max-width:480px;margin:0 auto 2rem;line-height:1.7;font-family:var(--fb)}
-.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-dark{background:var(--black);color:var(--white);font-family:var(--fh);font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;transition:.25s}
-.btn-dark:hover{background:var(--dark3);transform:translateY(-2px)}
+/* CTA */
+.cta-sec{position:relative;padding:8rem 0;text-align:center;overflow:hidden;background:linear-gradient(135deg,#FF6B9D 0%,#7B68EE 45%,#00D4C4 100%)}
+.cta-sec::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.1)}
+.cta-in{position:relative;z-index:2}
 
-footer{background:var(--black);color:rgba(255,255,255,.65);padding:60px 5% 30px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08)}
-.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:1rem;text-decoration:none}
-.footer-brand .brand-text{color:var(--white)}
-footer .footer-about{line-height:1.8;color:rgba(255,255,255,.5);max-width:280px;font-size:.82rem;font-family:var(--fb)}
-.footer-col h4{font-family:var(--fh);font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:1rem}
-.footer-col ul{list-style:none}
-.footer-col li{margin-bottom:.6rem}
-.footer-col a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.82rem;transition:color .2s;font-family:var(--fb)}
-.footer-col a:hover{color:var(--mint)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.4);max-width:none;font-family:var(--fb)}
-.footer-mint{color:var(--mint)!important}
+/* FOOTER */
+footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(255,255,255,.06)}
+.ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+.ft-ab p{font-size:.9rem;color:rgba(255,255,255,.35);line-height:1.78;margin-top:1.1rem}
+.ft-h{font-size:.68rem;font-weight:700;color:var(--mint);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.1rem}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.ft-ul a{font-size:.9rem;color:rgba(255,255,255,.4);transition:color .2s}
+.ft-ul a:hover{color:#fff}
+.ft-inf{font-size:.9rem;color:rgba(255,255,255,.36);line-height:2.2}
+.ft-inf a{color:rgba(255,255,255,.46);display:block;transition:color .2s}
+.ft-inf a:hover{color:var(--mint)}
+.ft-bt{border-top:1px solid rgba(255,255,255,.05);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-cp{font-size:.8rem;color:rgba(255,255,255,.22)}
+.ft-socials{display:flex;align-items:center;gap:.6rem}
+.ft-soc{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .2s}
+.ft-soc:hover{background:rgba(255,255,255,.12)}
 
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:680px){.nav-links{display:none}.hamburger{display:flex}.footer-grid{grid-template-columns:1fr}}
+/* RESPONSIVE */
+@media(max-width:1024px){.ft-g{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:rgba(0,0,0,.98);flex-direction:column;padding:1.75rem 2.5rem;gap:1.5rem}
+  .nav-links.open{display:flex}
+  .nav-tog{display:flex}
+  .nav-socials{display:none}
+  .nav-drop{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;padding:.2rem 0 0 1rem;box-shadow:none;min-width:auto}
+  .ft-g{grid-template-columns:1fr}
+  .form-glass{padding:1.75rem}
+}
 </style>
 </head>
 <body>
 
-<nav id="mainNav">
-  <a href="index.html" class="nav-brand">
-    <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
-      <defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
-      <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="url(#lg1)" opacity=".12"/>
-      <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="none" stroke="url(#lg1)" stroke-width="1.5"/>
-      <path d="M20 11C14 17.5 14 21.5 14 21.5A6 6 0 0020 27.5A6 6 0 0026 21.5C26 21.5 26 17.5 20 11Z" fill="url(#lg1)"/>
-      <circle cx="13" cy="13" r="1.5" fill="#00D4C4" opacity=".7"/>
-      <circle cx="27" cy="12" r="1" fill="#48CAE4" opacity=".7"/>
-    </svg>
-    <div class="brand-text">CoolMint<span>Mobile Detailing</span></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="service-areas.html">Service Areas</a></li>
-    <li><a href="contact.html" class="nav-cta active">Book Now</a></li>
-  </ul>
-  <button class="hamburger" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="55%" stop-color="#48CAE4"/><stop offset="100%" stop-color="#00D4C4"/></linearGradient></defs>
+        <circle cx="22" cy="22" r="20.5" fill="url(#lg1)" opacity=".07"/><circle cx="22" cy="22" r="20.5" fill="none" stroke="url(#lg1)" stroke-width="1.3"/><circle cx="22" cy="22" r="15" fill="none" stroke="url(#lg1)" stroke-width=".4" stroke-dasharray="2.5 3.5" opacity=".35"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="url(#lg1)" opacity=".11"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="none" stroke="url(#lg1)" stroke-width="1.2" stroke-linejoin="round"/><path d="M22 14.5C18.2 20.8 17 23.5 17 25.2A5 5 0 0022 30.2A5 5 0 0027 25.2C27 23.5 25.8 20.8 22 14.5Z" fill="url(#lg1)"/><ellipse cx="20.1" cy="23" rx="1.3" ry="2.2" fill="white" opacity=".28" transform="rotate(-18 20.1 23)"/><circle cx="12.5" cy="10" r="1.3" fill="#00D4C4" opacity=".78"/><circle cx="31" cy="9" r=".9" fill="#48CAE4" opacity=".78"/>
+      </svg>
+      <div class="logo-text"><span class="logo-main">CoolMint</span><span class="logo-sub">Mobile Detailing</span></div>
+    </a>
+    <ul class="nav-links" id="nLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li class="drop-wrap">
+        <span class="drop-lbl">Service Areas <span class="drop-arr">&#9660;</span></span>
+        <div class="nav-drop">
+          <a href="service-areas.html">All Service Areas</a>
+          <a href="service-areas.html">Coral Gables</a><a href="service-areas.html">Coral Springs</a>
+          <a href="service-areas.html">Cooper City</a><a href="service-areas.html">Davie</a>
+          <a href="service-areas.html">Fort Lauderdale</a><a href="service-areas.html">Hollywood</a>
+          <a href="service-areas.html">Margate</a><a href="service-areas.html">Miami Beach</a>
+          <a href="service-areas.html">Miramar</a><a href="service-areas.html">Pembroke Pines</a>
+          <a href="service-areas.html">South West Ranches</a><a href="service-areas.html">Sunrise</a>
+          <a href="service-areas.html">Weston</a>
+        </div>
+      </li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="soc-ic ig" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#F58529"/><stop offset="50%" stop-color="#DD2A7B"/><stop offset="100%" stop-color="#8134AF"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#ig)" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="url(#ig)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="#DD2A7B"/></svg></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="soc-ic fb" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://wa.me/19373031014" target="_blank" rel="noopener" class="soc-ic wa" aria-label="WhatsApp"><svg width="17" height="17" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+      <a href="tel:9373031014" class="nav-cta">Call Now</a>
+    </div>
+    <button class="nav-tog" id="nTog" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
-<div class="mob-menu" id="mobMenu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="service-areas.html">Service Areas</a>
-  <a href="contact.html">Book Now</a>
-</div>
 
+<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="sec-label">Get In Touch</div>
+  <div class="ph-tag">Get In Touch</div>
   <h1>Book Your <span>Detail</span></h1>
   <p>Call, text, or fill out the form below. Sebastian will confirm your appointment fast — usually same day.</p>
 </section>
 
-<section class="contact-section">
-  <div class="contact-grid">
+<!-- CONTACT SECTION -->
+<section class="contact-sec">
+  <div class="contact-bg"></div>
+  <div class="ct">
+    <div class="contact-grid">
 
-    <div class="contact-form-wrap" data-reveal>
-      <div class="form-title">Request a Booking</div>
-      <p class="form-sub">Fill out the form and we will get back to you with availability and pricing. Fast response guaranteed.</p>
-      <form action="https://formspree.io/f/YOUR_ID" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="first_name" placeholder="Sebastian" required>
+      <div class="form-glass">
+        <div class="form-title">Request a Booking</div>
+        <p class="form-sub">Fill out the form and we will get back to you with availability and pricing. Fast response guaranteed.</p>
+        <form action="https://formspree.io/f/YOUR_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email (optional)</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com">
+            </div>
           </div>
           <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="last_name" placeholder="Garcia">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="Interior Detail">Interior Detail</option>
+              <option value="Exterior Detail">Exterior Detail</option>
+              <option value="Full Detail Package">Full Detail Package</option>
+              <option value="Maintenance Wash">Maintenance Wash</option>
+              <option value="Not sure yet">Not sure yet — need a quote</option>
+            </select>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email (optional)</label>
-            <input type="email" id="email" name="email" placeholder="you@email.com">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="service">Service Needed</label>
-          <select id="service" name="service" required>
-            <option value="" disabled selected>Select a service...</option>
-            <option value="Interior Detail">Interior Detail</option>
-            <option value="Exterior Detail">Exterior Detail</option>
-            <option value="Full Detail Package">Full Detail Package</option>
-            <option value="Maintenance Wash">Maintenance Wash</option>
-            <option value="Not sure yet">Not sure yet — need a quote</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="vehicle">Vehicle (Year / Make / Model)</label>
-            <input type="text" id="vehicle" name="vehicle" placeholder="2022 Toyota Camry">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vehicle">Vehicle (Year / Make / Model)</label>
+              <input type="text" id="vehicle" name="vehicle" placeholder="2022 Toyota Camry">
+            </div>
+            <div class="form-group">
+              <label for="city">Your City</label>
+              <input type="text" id="city" name="city" placeholder="Pembroke Pines">
+            </div>
           </div>
           <div class="form-group">
-            <label for="city">Your City</label>
-            <input type="text" id="city" name="city" placeholder="Pembroke Pines">
+            <label for="message">Anything Else?</label>
+            <textarea id="message" name="message" placeholder="Tell us about specific concerns, preferred days/times, or anything we should know..."></textarea>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="message">Anything Else?</label>
-          <textarea id="message" name="message" placeholder="Tell us about any specific concerns, preferred days/times, or anything we should know..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Booking Request</button>
-      </form>
-    </div>
-
-    <div class="contact-info" data-reveal>
-
-      <div class="info-card">
-        <div class="info-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.95 2.88 2 2 0 012.92 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <div>
-          <div class="info-label">Call or Text</div>
-          <div class="info-value"><a href="tel:9373031014">(937) 303-1014</a></div>
-          <div class="info-note">Call or text anytime — Sebastian responds fast.</div>
-        </div>
+          <button type="submit" class="form-submit">Send Booking Request</button>
+        </form>
       </div>
 
-      <div class="info-card">
-        <div class="info-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="contact-info">
+        <div class="info-glass">
+          <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <div class="info-label">Call or Text</div>
+            <div class="info-value"><a href="tel:9373031014">(937) 303-1014</a></div>
+            <div class="info-note">Call or text anytime — Sebastian responds fast.</div>
+          </div>
         </div>
-        <div>
-          <div class="info-label">Service Location</div>
-          <div class="info-value">We Come to You</div>
-          <div class="info-note">Based in Pembroke Pines, FL. Serving Broward and Miami-Dade counties.</div>
+        <div class="info-glass">
+          <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="info-label">Service Location</div>
+            <div class="info-value">We Come to You</div>
+            <div class="info-note">Based in Pembroke Pines, FL. Serving Broward and Miami-Dade counties.</div>
+          </div>
         </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="info-glass">
+          <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="info-label">Response Time</div>
+            <div class="info-value">Same Day</div>
+            <div class="info-note">Most messages and calls are answered within a few hours.</div>
+          </div>
         </div>
-        <div>
-          <div class="info-label">Response Time</div>
-          <div class="info-value">Same Day</div>
-          <div class="info-note">Most messages and calls are answered within a few hours.</div>
-        </div>
-      </div>
-
-      <div class="hours-card">
-        <div class="hours-title">
-          <div class="hours-dot"></div>
-          Business Hours
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Monday – Friday</span>
-          <span class="hours-time">7:00 AM – 7:00 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Saturday</span>
-          <span class="hours-time">8:00 AM – 6:00 PM</span>
-        </div>
-        <div class="hours-row">
-          <span class="hours-day">Sunday</span>
-          <span class="hours-time">9:00 AM – 5:00 PM</span>
+        <div class="hours-glass">
+          <div class="hours-title"><div class="hours-dot"></div>Business Hours</div>
+          <div class="hours-row"><span class="hours-day">Monday &ndash; Friday</span><span class="hours-time">7:00 AM &ndash; 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">8:00 AM &ndash; 6:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">9:00 AM &ndash; 5:00 PM</span></div>
         </div>
       </div>
 
@@ -268,81 +301,50 @@ footer .footer-about{line-height:1.8;color:rgba(255,255,255,.5);max-width:280px;
   </div>
 </section>
 
-<section class="cta-section">
-  <h2>Prefer to Just Call?</h2>
-  <p>Skip the form. Give Sebastian a call or text right now and get on the schedule today.</p>
-  <div class="cta-btns">
-    <a href="tel:9373031014" class="btn-dark">Call (937) 303-1014</a>
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="ct cta-in">
+    <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;color:#000;margin-bottom:.75rem">Prefer to Just Call?</h2>
+    <p style="font-size:1rem;color:rgba(0,0,0,.68);max-width:440px;margin:0 auto 2rem;line-height:1.75">Skip the form. Give Sebastian a call or text right now and get on the schedule today.</p>
+    <a href="tel:9373031014" class="btn-p" style="display:inline-flex;margin:0 auto">Call (937) 303-1014</a>
   </div>
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div>
-      <a href="index.html" class="footer-brand">
-        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
-          <defs><linearGradient id="lg2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
-          <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="url(#lg2)" opacity=".12"/>
-          <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="none" stroke="url(#lg2)" stroke-width="1.5"/>
-          <path d="M20 11C14 17.5 14 21.5 14 21.5A6 6 0 0020 27.5A6 6 0 0026 21.5C26 21.5 26 17.5 20 11Z" fill="url(#lg2)"/>
-          <circle cx="13" cy="13" r="1.5" fill="#00D4C4" opacity=".7"/>
-          <circle cx="27" cy="12" r="1" fill="#48CAE4" opacity=".7"/>
-        </svg>
-        <div class="brand-text">CoolMint<span>Mobile Detailing</span></div>
-      </a>
-      <p class="footer-about">Professional mobile car detailing in Pembroke Pines, FL and surrounding South Florida areas. We come to you.</p>
+  <div class="ct">
+    <div class="ft-g">
+      <div class="ft-ab">
+        <a href="index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 44 44" fill="none"><defs><linearGradient id="lg2" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="55%" stop-color="#48CAE4"/><stop offset="100%" stop-color="#00D4C4"/></linearGradient></defs><circle cx="22" cy="22" r="20.5" fill="url(#lg2)" opacity=".07"/><circle cx="22" cy="22" r="20.5" fill="none" stroke="url(#lg2)" stroke-width="1.3"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="none" stroke="url(#lg2)" stroke-width="1.2" stroke-linejoin="round"/><path d="M22 14.5C18.2 20.8 17 23.5 17 25.2A5 5 0 0022 30.2A5 5 0 0027 25.2C27 23.5 25.8 20.8 22 14.5Z" fill="url(#lg2)"/></svg>
+          <div class="logo-text"><span class="logo-main">CoolMint</span><span class="logo-sub">Mobile Detailing</span></div>
+        </a>
+        <p>Professional mobile car detailing serving Pembroke Pines and South Florida. We come to you and leave your vehicle spotless every time.</p>
+      </div>
+      <div><div class="ft-h">Navigation</div><ul class="ft-ul"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="ft-h">Services</div><ul class="ft-ul"><li><a href="services.html">Interior Detailing</a></li><li><a href="services.html">Exterior Detailing</a></li><li><a href="services.html">Full Detail Package</a></li><li><a href="services.html">Maintenance Wash</a></li></ul></div>
+      <div><div class="ft-h">Contact</div><div class="ft-inf"><a href="tel:9373031014">(937) 303-1014</a><a href="sms:9373031014">Text Us</a><a href="https://wa.me/19373031014" target="_blank" rel="noopener">WhatsApp</a><div>Pembroke Pines, FL</div><div>Mon &ndash; Sun &middot; 8am &ndash; 7pm</div></div></div>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="services.html">Interior Detail</a></li>
-        <li><a href="services.html">Exterior Detail</a></li>
-        <li><a href="services.html">Full Detail Package</a></li>
-        <li><a href="services.html">Maintenance Wash</a></li>
-      </ul>
+    <div class="ft-bt">
+      <p class="ft-cp">&copy; 2025 CoolMint Mobile Car Detailing. All rights reserved.</p>
+      <div class="ft-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="ft-soc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="rgba(255,255,255,.4)" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="rgba(255,255,255,.4)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="rgba(255,255,255,.4)"/></svg></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="ft-soc"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,.4)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://wa.me/19373031014" target="_blank" rel="noopener" class="ft-soc"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,.4)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="service-areas.html">Service Areas</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:9373031014">(937) 303-1014</a></li>
-        <li><a href="contact.html">Send a Message</a></li>
-        <li><a href="service-areas.html">Pembroke Pines, FL</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 <span class="footer-mint">CoolMint Mobile Detailing</span>. All rights reserved.</p>
-    <p>Serving South Florida with pride.</p>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-window.addEventListener('load',()=>{
-  if(typeof Lenis!=='undefined'){
-    const lenis=new Lenis({lerp:.08,duration:1.2});
-    function raf(t){lenis.raf(t);requestAnimationFrame(raf)}
-    requestAnimationFrame(raf);
-  }
-  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
-    gsap.registerPlugin(ScrollTrigger);
-    document.querySelectorAll('[data-reveal]').forEach(el=>{
-      gsap.fromTo(el,{y:40,opacity:0},{y:0,opacity:1,duration:.8,ease:'power2.out',
-        scrollTrigger:{trigger:el,start:'top 88%'}});
-    });
-  }
-  const nav=document.getElementById('mainNav');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
-  document.getElementById('hbg').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
-});
+document.getElementById('nTog').onclick=()=>document.getElementById('nLinks').classList.toggle('open');
+gsap.registerPlugin(ScrollTrigger);
+const ease='power2.out';
+gsap.from('.page-hero h1',{opacity:0,y:30,duration:.85,delay:.3,ease});
+gsap.from('.page-hero p',{opacity:0,y:18,duration:.75,delay:.5,ease});
+gsap.from('.form-glass',{scrollTrigger:{trigger:'.contact-grid',start:'top 85%'},opacity:0,x:-24,duration:.8,ease});
+gsap.from('.contact-info',{scrollTrigger:{trigger:'.contact-grid',start:'top 85%'},opacity:0,x:24,duration:.8,delay:.1,ease});
 </script>
 </body>
 </html>
