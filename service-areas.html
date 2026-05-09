@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Service Areas | CoolMint Mobile Car Detailing — Pembroke Pines FL</title>
+<meta name="description" content="CoolMint Mobile Car Detailing serves Pembroke Pines, Miramar, Hollywood, Weston, Davie, Sunrise, Plantation, Hialeah, Miami Gardens and more South Florida cities.">
+<meta property="og:title" content="Service Areas | CoolMint Mobile Car Detailing">
+<meta property="og:description" content="Mobile car detailing serving Broward and Miami-Dade counties across South Florida.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://coolmintdetail.com/service-areas.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"CoolMint Mobile Car Detailing","telephone":"(937) 303-1014","address":{"@type":"PostalAddress","addressLocality":"Pembroke Pines","addressRegion":"FL","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Pembroke Pines"},{"@type":"City","name":"Miramar"},{"@type":"City","name":"Hollywood"},{"@type":"City","name":"Weston"},{"@type":"City","name":"Davie"},{"@type":"City","name":"Sunrise"},{"@type":"City","name":"Plantation"},{"@type":"City","name":"Hialeah"},{"@type":"City","name":"Miami Gardens"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js" defer></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --mint:#00D4C4;--mintl:#4DE8DC;--mintd:#00A896;
+  --pink:#FF6B9D;--sky:#48CAE4;--purple:#7B68EE;
+  --black:#0A0F1C;--dark:#111827;--dark2:#0D1F35;--dark3:#1A2B3C;
+  --white:#fff;--off:#F8FAFC;--grey:#F1F5F9;
+  --body:#374151;--muted:#6B7280;--border:#E2E8F0;
+  --fh:'Poppins',sans-serif;--fb:Verdana,Geneva,sans-serif
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--body);background:var(--white);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;background:rgba(10,15,28,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,212,196,.15);transition:background .3s}
+nav.scrolled{background:rgba(10,15,28,.98)}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;flex-shrink:0}
+.brand-text{font-family:var(--fh);font-weight:800;font-size:1.1rem;line-height:1.1;color:var(--white)}
+.brand-text span{color:var(--mint);display:block;font-size:.7rem;font-weight:500;letter-spacing:.05em}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--fh);font-size:.85rem;font-weight:500;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--mint)}
+.nav-cta{background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--black)!important;font-weight:700!important;padding:8px 18px;border-radius:6px;transition:opacity .2s,transform .2s}
+.nav-cta:hover{opacity:.9;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
+.mob-menu{display:none;flex-direction:column;background:var(--black);border-top:1px solid rgba(0,212,196,.15);padding:1rem 5%}
+.mob-menu a{font-family:var(--fh);font-size:.95rem;font-weight:500;color:rgba(255,255,255,.85);text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mob-menu a:hover{color:var(--mint)}
+.mob-menu.open{display:flex}
+
+.page-hero{padding:140px 5% 80px;background:linear-gradient(160deg,var(--black),var(--dark2));text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(0,212,196,.08),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(72,202,228,.06),transparent 50%);pointer-events:none}
+.page-hero>*{position:relative}
+.sec-label{font-family:var(--fh);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.page-hero h1{font-family:var(--fh);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--white);line-height:1.15;margin-bottom:1rem}
+.page-hero h1 span{background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:580px;margin:0 auto 1.5rem;line-height:1.8}
+.phone-pill{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--mint),var(--sky));color:var(--black);font-family:var(--fh);font-weight:700;font-size:1rem;padding:12px 28px;border-radius:50px;text-decoration:none;transition:.25s}
+.phone-pill:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,212,196,.35)}
+
+.sec-title{font-family:var(--fh);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--black);line-height:1.2}
+.sec-title span{background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-sub{font-size:.95rem;color:var(--muted);line-height:1.8}
+
+.coverage-note{background:linear-gradient(135deg,rgba(0,212,196,.06),rgba(72,202,228,.04));border:1px solid rgba(0,212,196,.2);border-radius:12px;padding:1.5rem 2rem;max-width:700px;margin:0 auto 3rem;display:flex;align-items:flex-start;gap:1rem}
+.coverage-note svg{flex-shrink:0;margin-top:2px}
+.coverage-note p{font-size:.9rem;color:var(--body);line-height:1.7;font-family:var(--fb)}
+.coverage-note p strong{font-family:var(--fh);color:var(--black)}
+
+.areas-section{padding:80px 5%;background:var(--off)}
+.areas-section .sec-header{text-align:center;margin-bottom:3rem}
+.areas-section .sec-header .sec-label{margin-bottom:.5rem}
+.areas-section .sec-header .sec-title{margin-bottom:.75rem}
+.counties-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.county-block{background:var(--white);border-radius:16px;padding:2rem 2.5rem;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.county-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem}
+.county-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--sky));flex-shrink:0}
+.county-name{font-family:var(--fh);font-size:1.2rem;font-weight:800;color:var(--black)}
+.county-sub{font-size:.82rem;color:var(--muted);font-family:var(--fb);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.cities-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.city-item{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--body);font-family:var(--fb);padding:.5rem .75rem;border-radius:8px;background:var(--off);border:1px solid var(--border);transition:border-color .2s,background .2s}
+.city-item:hover{border-color:var(--mint);background:rgba(0,212,196,.04)}
+.city-item svg{flex-shrink:0}
+.city-primary{border-color:rgba(0,212,196,.3);background:rgba(0,212,196,.04)}
+.city-primary .city-name{color:var(--mintd);font-weight:600}
+.city-name{font-family:var(--fh);font-size:.88rem;font-weight:500;color:var(--black)}
+
+.how-section{background:var(--dark);padding:70px 5%}
+.how-section .sec-header{text-align:center;margin-bottom:3rem}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:900px;margin:0 auto}
+.how-item{text-align:center}
+.how-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--sky));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:900;font-size:1.2rem;color:var(--black);margin:0 auto 1rem}
+.how-title{font-family:var(--fh);font-weight:700;font-size:1rem;color:var(--white);margin-bottom:.5rem}
+.how-text{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.7;font-family:var(--fb)}
+
+.cta-section{background:linear-gradient(135deg,var(--mint),var(--sky),var(--purple));padding:80px 5%;text-align:center}
+.cta-section h2{font-family:var(--fh);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:var(--black);margin-bottom:.75rem}
+.cta-section p{font-size:1rem;color:rgba(0,0,0,.7);max-width:480px;margin:0 auto 2rem;line-height:1.7;font-family:var(--fb)}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:var(--black);color:var(--white);font-family:var(--fh);font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;transition:.25s}
+.btn-dark:hover{background:var(--dark3);transform:translateY(-2px)}
+.btn-outline-dark{border:2px solid var(--black);color:var(--black);font-family:var(--fh);font-weight:700;padding:12px 30px;border-radius:8px;text-decoration:none;transition:.25s}
+.btn-outline-dark:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
+
+footer{background:var(--black);color:rgba(255,255,255,.65);padding:60px 5% 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:1rem;text-decoration:none}
+.footer-brand .brand-text{color:var(--white)}
+footer .footer-about{line-height:1.8;color:rgba(255,255,255,.5);max-width:280px;font-size:.82rem;font-family:var(--fb)}
+.footer-col h4{font-family:var(--fh);font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:1rem}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:.6rem}
+.footer-col a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.82rem;transition:color .2s;font-family:var(--fb)}
+.footer-col a:hover{color:var(--mint)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.4);max-width:none;font-family:var(--fb)}
+.footer-mint{color:var(--mint)!important}
+
+@media(max-width:900px){.counties-wrap{grid-template-columns:1fr}.how-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.nav-links{display:none}.hamburger{display:flex}.cities-grid{grid-template-columns:1fr}.how-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-brand">
+    <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+      <defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
+      <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="url(#lg1)" opacity=".12"/>
+      <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="none" stroke="url(#lg1)" stroke-width="1.5"/>
+      <path d="M20 11C14 17.5 14 21.5 14 21.5A6 6 0 0020 27.5A6 6 0 0026 21.5C26 21.5 26 17.5 20 11Z" fill="url(#lg1)"/>
+      <circle cx="13" cy="13" r="1.5" fill="#00D4C4" opacity=".7"/>
+      <circle cx="27" cy="12" r="1" fill="#48CAE4" opacity=".7"/>
+    </svg>
+    <div class="brand-text">CoolMint<span>Mobile Detailing</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="service-areas.html" class="active">Service Areas</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="service-areas.html">Service Areas</a>
+  <a href="contact.html">Book Now</a>
+</div>
+
+<section class="page-hero">
+  <div class="sec-label">Where We Work</div>
+  <h1>Our <span>Service Areas</span></h1>
+  <p>Based in Pembroke Pines, FL — we travel to you anywhere across Broward and Miami-Dade counties. Your driveway, your parking spot, your job. We come to you.</p>
+  <a href="tel:9373031014" class="phone-pill">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.95 2.88 2 2 0 012.92 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (937) 303-1014
+  </a>
+</section>
+
+<section class="areas-section">
+  <div class="sec-header">
+    <div class="sec-label">Coverage Map</div>
+    <h2 class="sec-title">Serving <span>South Florida</span></h2>
+    <p class="sec-sub" style="max-width:520px;margin:0 auto 2rem">We cover Broward County and Miami-Dade County. Not sure if we come to you? Just call — we will let you know.</p>
+  </div>
+  <div class="coverage-note" data-reveal>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <p><strong>We come to your location.</strong> We detail at your home, workplace, apartment complex, or wherever your car is parked. No need to drive anywhere.</p>
+  </div>
+  <div class="counties-wrap">
+
+    <div class="county-block" data-reveal>
+      <div class="county-header">
+        <div class="county-dot"></div>
+        <div class="county-name">Broward County</div>
+      </div>
+      <p class="county-sub">Our home base. We cover all of Broward with fast scheduling and same-week availability.</p>
+      <div class="cities-grid">
+        <div class="city-item city-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00A896" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Pembroke Pines</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Miramar</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Hollywood</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Weston</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Cooper City</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Davie</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Sunrise</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Plantation</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Dania Beach</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Hallandale Beach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="county-block" data-reveal>
+      <div class="county-header">
+        <div class="county-dot" style="background:linear-gradient(135deg,var(--pink),var(--purple))"></div>
+        <div class="county-name">Miami-Dade County</div>
+      </div>
+      <p class="county-sub">We extend south into Miami-Dade for customers near our Broward base. Call to confirm your city.</p>
+      <div class="cities-grid">
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Hialeah</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Miami Gardens</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Aventura</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">North Miami</span>
+        </div>
+        <div class="city-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="city-name">Miami Lakes</span>
+        </div>
+        <div class="city-item" style="border-color:rgba(0,212,196,.15);background:rgba(0,212,196,.02)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          <span class="city-name" style="color:var(--muted)">More — Call Us</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="sec-header">
+    <div class="sec-label" style="color:var(--mint)">How It Works</div>
+    <h2 class="sec-title" style="color:var(--white)">Getting Started Is <span>Easy</span></h2>
+  </div>
+  <div class="how-grid">
+    <div class="how-item" data-reveal>
+      <div class="how-num">1</div>
+      <div class="how-title">Call or Message</div>
+      <p class="how-text">Call, text, or use the contact form to reach Sebastian. Tell him your city, vehicle type, and what service you need.</p>
+    </div>
+    <div class="how-item" data-reveal>
+      <div class="how-num">2</div>
+      <div class="how-title">Pick Your Time</div>
+      <p class="how-text">We work with your schedule — weekdays, weekends, mornings or afternoons. We confirm your spot and show up on time.</p>
+    </div>
+    <div class="how-item" data-reveal>
+      <div class="how-num">3</div>
+      <div class="how-title">We Come to You</div>
+      <p class="how-text">Sebastian pulls up to your location fully equipped and handles everything. You relax while your car gets the treatment it deserves.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Not Sure if We Cover Your Area?</h2>
+  <p>Give us a call. If we can get to you, we will make it work. We cover more of South Florida than what's listed.</p>
+  <div class="cta-btns">
+    <a href="tel:9373031014" class="btn-dark">Call (937) 303-1014</a>
+    <a href="contact.html" class="btn-outline-dark">Send a Message</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-brand">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+          <defs><linearGradient id="lg2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="100%" stop-color="#48CAE4"/></linearGradient></defs>
+          <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="url(#lg2)" opacity=".12"/>
+          <path d="M20 3C20 3 4 8 4 20C4 30 12 37 20 38C28 37 36 30 36 20C36 8 20 3 20 3Z" fill="none" stroke="url(#lg2)" stroke-width="1.5"/>
+          <path d="M20 11C14 17.5 14 21.5 14 21.5A6 6 0 0020 27.5A6 6 0 0026 21.5C26 21.5 26 17.5 20 11Z" fill="url(#lg2)"/>
+          <circle cx="13" cy="13" r="1.5" fill="#00D4C4" opacity=".7"/>
+          <circle cx="27" cy="12" r="1" fill="#48CAE4" opacity=".7"/>
+        </svg>
+        <div class="brand-text">CoolMint<span>Mobile Detailing</span></div>
+      </a>
+      <p class="footer-about">Professional mobile car detailing in Pembroke Pines, FL and surrounding South Florida areas. We come to you.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Interior Detail</a></li>
+        <li><a href="services.html">Exterior Detail</a></li>
+        <li><a href="services.html">Full Detail Package</a></li>
+        <li><a href="services.html">Maintenance Wash</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="service-areas.html">Service Areas</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:9373031014">(937) 303-1014</a></li>
+        <li><a href="contact.html">Send a Message</a></li>
+        <li><a href="service-areas.html">Pembroke Pines, FL</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span class="footer-mint">CoolMint Mobile Detailing</span>. All rights reserved.</p>
+    <p>Serving South Florida with pride.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('load',()=>{
+  if(typeof Lenis!=='undefined'){
+    const lenis=new Lenis({lerp:.08,duration:1.2});
+    function raf(t){lenis.raf(t);requestAnimationFrame(raf)}
+    requestAnimationFrame(raf);
+  }
+  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('[data-reveal]').forEach(el=>{
+      gsap.fromTo(el,{y:40,opacity:0},{y:0,opacity:1,duration:.8,ease:'power2.out',
+        scrollTrigger:{trigger:el,start:'top 88%'}});
+    });
+  }
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+  document.getElementById('hbg').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+});
+</script>
+</body>
+</html>
