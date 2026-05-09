@@ -77,8 +77,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 
 /* CONTACT SECTION — FROSTED GLASS OVER PHOTO */
 .contact-sec{position:relative;padding:7rem 0;overflow:hidden}
-.contact-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.18)}
-.contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.contact-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.32)}
+.contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:stretch}
+.contact-left{display:flex;flex-direction:column;gap:1.5rem}
+.ci-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.ci-card{background:rgba(0,0,0,.62);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.09);border-radius:4px;padding:1.25rem .9rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.45rem}
+.ci-card-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,196,.14),rgba(72,202,228,.07));display:flex;align-items:center;justify-content:center}
+.ci-card-lbl{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.09em}
+.ci-card-val{font-size:.88rem;font-weight:700;color:#fff;line-height:1.3}
+.ci-card-val a{color:#fff;transition:color .2s}
+.ci-card-val a:hover{color:var(--mint)}
+.map-wrap{position:relative;z-index:2;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.1);min-height:680px}
+.map-wrap iframe{width:100%;height:100%;min-height:680px;border:none;display:block;filter:saturate(.85) brightness(.9)}
 
 /* FORM — GLASS */
 .form-glass{background:rgba(0,0,0,.65);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:2.75rem}
@@ -144,7 +154,9 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 
 /* RESPONSIVE */
 @media(max-width:1024px){.ft-g{grid-template-columns:1fr 1fr}}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+@media(max-width:1024px){.contact-grid{grid-template-columns:1fr}.map-wrap{min-height:460px}.map-wrap iframe{min-height:460px}}
+@media(max-width:900px){.form-row{grid-template-columns:1fr}}
+@media(max-width:600px){.ci-row{grid-template-columns:1fr}}
 @media(max-width:768px){
   .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:rgba(0,0,0,.98);flex-direction:column;padding:1.75rem 2.5rem;gap:1.5rem}
   .nav-links.open{display:flex}
@@ -211,90 +223,95 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   <div class="ct">
     <div class="contact-grid">
 
-      <div class="form-glass">
-        <div class="form-title">Request a Booking</div>
-        <p class="form-sub">Fill out the form and we will get back to you with availability and pricing. Fast response guaranteed.</p>
-        <form action="https://formspree.io/f/YOUR_ID" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="first_name" placeholder="First name" required>
+      <!-- LEFT: info cards + form -->
+      <div class="contact-left">
+
+        <div class="ci-row">
+          <div class="ci-card">
+            <div class="ci-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
-            <div class="form-group">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="last_name" placeholder="Last name">
-            </div>
+            <div class="ci-card-lbl">Call or Text</div>
+            <div class="ci-card-val"><a href="tel:9373031014">(937) 303-1014</a></div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
+          <div class="ci-card">
+            <div class="ci-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="ci-card-lbl">WhatsApp</div>
+            <div class="ci-card-val"><a href="https://wa.me/19373031014" target="_blank" rel="noopener">Message Us</a></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="ci-card-lbl">Service Area</div>
+            <div class="ci-card-val">Pembroke Pines, FL</div>
+          </div>
+        </div>
+
+        <div class="form-glass">
+          <div class="form-title">Request a Booking</div>
+          <p class="form-sub">Fill out the form and Sebastian will get back to you with availability and pricing. Fast response guaranteed.</p>
+          <form action="https://formspree.io/f/YOUR_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="first_name" placeholder="First name" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" placeholder="Last name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com">
+              </div>
             </div>
             <div class="form-group">
-              <label for="email">Email (optional)</label>
-              <input type="email" id="email" name="email" placeholder="you@email.com">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Interior Detail">Interior Detail</option>
+                <option value="Exterior Detail">Exterior Detail</option>
+                <option value="Full Detail Package">Full Detail Package</option>
+                <option value="Maintenance Wash">Maintenance Wash</option>
+                <option value="Not sure yet">Not sure yet &mdash; need a quote</option>
+              </select>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="service">Service Needed</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service...</option>
-              <option value="Interior Detail">Interior Detail</option>
-              <option value="Exterior Detail">Exterior Detail</option>
-              <option value="Full Detail Package">Full Detail Package</option>
-              <option value="Maintenance Wash">Maintenance Wash</option>
-              <option value="Not sure yet">Not sure yet — need a quote</option>
-            </select>
-          </div>
-          <div class="form-row">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vehicle">Vehicle (Year / Make / Model)</label>
+                <input type="text" id="vehicle" name="vehicle" placeholder="2022 Toyota Camry">
+              </div>
+              <div class="form-group">
+                <label for="city">Your City</label>
+                <input type="text" id="city" name="city" placeholder="Pembroke Pines">
+              </div>
+            </div>
             <div class="form-group">
-              <label for="vehicle">Vehicle (Year / Make / Model)</label>
-              <input type="text" id="vehicle" name="vehicle" placeholder="2022 Toyota Camry">
+              <label for="message">Anything Else?</label>
+              <textarea id="message" name="message" placeholder="Tell us about specific concerns, preferred days/times, or anything we should know..."></textarea>
             </div>
-            <div class="form-group">
-              <label for="city">Your City</label>
-              <input type="text" id="city" name="city" placeholder="Pembroke Pines">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Anything Else?</label>
-            <textarea id="message" name="message" placeholder="Tell us about specific concerns, preferred days/times, or anything we should know..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Booking Request</button>
-        </form>
+            <button type="submit" class="form-submit">Send Booking Request</button>
+          </form>
+        </div>
+
       </div>
 
-      <div class="contact-info">
-        <div class="info-glass">
-          <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div>
-            <div class="info-label">Call or Text</div>
-            <div class="info-value"><a href="tel:9373031014">(937) 303-1014</a></div>
-            <div class="info-note">Call or text anytime — Sebastian responds fast.</div>
-          </div>
-        </div>
-        <div class="info-glass">
-          <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div>
-            <div class="info-label">Service Location</div>
-            <div class="info-value">We Come to You</div>
-            <div class="info-note">Based in Pembroke Pines, FL. Serving Broward and Miami-Dade counties.</div>
-          </div>
-        </div>
-        <div class="info-glass">
-          <div class="info-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C4" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div>
-            <div class="info-label">Response Time</div>
-            <div class="info-value">Same Day</div>
-            <div class="info-note">Most messages and calls are answered within a few hours.</div>
-          </div>
-        </div>
-        <div class="hours-glass">
-          <div class="hours-title"><div class="hours-dot"></div>Business Hours</div>
-          <div class="hours-row"><span class="hours-day">Monday &ndash; Friday</span><span class="hours-time">7:00 AM &ndash; 7:00 PM</span></div>
-          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">8:00 AM &ndash; 6:00 PM</span></div>
-          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">9:00 AM &ndash; 5:00 PM</span></div>
-        </div>
+      <!-- RIGHT: Google Map -->
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114930.34!2d-80.34971!3d25.98703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a3c18f2af235%3A0x1d24de43929c4a71!2sPembroke%20Pines%2C%20FL%2C%20USA!5e0!3m2!1sen!2sus!4v1683000000001!5m2!1sen!2sus"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="CoolMint Mobile Detailing Service Area — Pembroke Pines FL">
+        </iframe>
       </div>
 
     </div>

@@ -152,12 +152,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 .rev-all{font-weight:600;font-size:.92rem;color:#fff;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);padding:.65rem 1.6rem;border-radius:100px;transition:background .2s}
 .rev-all:hover{background:rgba(255,255,255,.25)}
 
+/* ABOUT */
+.about-sec{background:var(--dark);padding:7rem 0;overflow:hidden}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-imgs{position:relative;height:540px}
+.about-img1{position:absolute;left:0;top:0;width:72%;height:80%;object-fit:cover;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.65)}
+.about-img2{position:absolute;right:0;bottom:0;width:65%;height:72%;object-fit:cover;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.7);border:4px solid var(--dark)}
+.about-pts{display:flex;flex-direction:column;gap:.9rem;margin-top:1.75rem}
+.about-pt{display:flex;align-items:flex-start;gap:.8rem;font-size:.93rem;color:rgba(255,255,255,.65);line-height:1.55}
+.about-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);flex-shrink:0;margin-top:.38rem}
+
 /* GALLERY */
-.gal-sec{background:var(--dark);padding:7rem 0}
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3.5rem}
-.gal-it{overflow:hidden;aspect-ratio:4/3}
-.gal-it img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.gal-it:hover img{transform:scale(1.05)}
+.gal-sec{background:var(--black);padding:7rem 0 0}
+.stats-bar{background:var(--dark3);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);margin-top:3.5rem}
+.stats-g{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-it{padding:2.25rem 1.5rem;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+.stat-it:last-child{border-right:none}
+.stat-num{font-size:clamp(2.2rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1}
+.stat-lbl{font-size:.74rem;font-weight:600;color:rgba(255,255,255,.4);margin-top:.5rem;text-transform:uppercase;letter-spacing:.1em}
+.gal-grid-full{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.gal-it-full{overflow:hidden;aspect-ratio:1/1}
+.gal-it-full img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.gal-it-full:hover img{transform:scale(1.07)}
 
 /* AREAS */
 .ar-sec{background:var(--black);padding:7rem 0}
@@ -210,6 +226,10 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   .why-g{grid-template-columns:1fr}
   .why-img{height:320px}
   .rev-c{flex:0 0 calc(50% - .75rem)}
+  .about-g{grid-template-columns:1fr}
+  .about-imgs{height:380px;margin-bottom:2rem}
+  .stats-g{grid-template-columns:repeat(2,1fr)}
+  .gal-grid-full{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:768px){
   .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:rgba(0,0,0,.98);flex-direction:column;padding:1.75rem 2.5rem;gap:1.5rem}
@@ -219,7 +239,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   .nav-drop{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;padding:.2rem 0 0 1rem;box-shadow:none;min-width:auto}
   .ar-grid{grid-template-columns:repeat(2,1fr);border:none;gap:1px}
   .ar-chip{border-bottom:1px solid rgba(255,255,255,.06)}
-  .gal-grid{grid-template-columns:repeat(2,1fr);gap:2px}
+  .gal-grid-full{grid-template-columns:repeat(2,1fr)}
   .rev-c{flex:0 0 100%}
   .qr-in{flex-direction:column;align-items:flex-start}
   .ft-g{grid-template-columns:1fr}
@@ -227,6 +247,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   .cta-glass{padding:2.5rem 1.5rem}
   .why-glass{padding:2rem}
   .hero p{font-size:1.05rem}
+  .about-imgs{height:280px}
 }
 </style>
 </head>
@@ -400,6 +421,31 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   </div>
 </section>
 
+<!-- ABOUT -->
+<section class="about-sec">
+  <div class="ct">
+    <div class="about-g">
+      <div class="about-imgs">
+        <img class="about-img1" src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=700&h=520&q=80" alt="CoolMint detailing work">
+        <img class="about-img2" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&h=440&q=80" alt="Exterior hand wash">
+      </div>
+      <div class="about-txt">
+        <div class="s-tag pk">About CoolMint</div>
+        <h2 class="s-h">South Florida's Premier<br>Mobile Detailing</h2>
+        <p class="s-p" style="margin-bottom:1.2rem">Sebastian founded CoolMint with one promise &mdash; bring showroom-quality detailing straight to your door. No shop visits. No waiting. Just elite results at your location, on your schedule.</p>
+        <p class="s-p" style="margin-bottom:1.75rem">With years of hands-on experience and a relentless eye for detail, Sebastian has earned the trust of hundreds of clients across South Florida. Every vehicle gets the same focused care &mdash; from quick interior refreshes to full exterior transformations.</p>
+        <div class="about-pts">
+          <div class="about-pt"><div class="about-dot"></div>Mobile service &mdash; we come to your home, office, or any location</div>
+          <div class="about-pt"><div class="about-dot"></div>Trusted by hundreds of clients across Broward &amp; Miami-Dade</div>
+          <div class="about-pt"><div class="about-dot"></div>All vehicles welcome &mdash; sedans, SUVs, luxury cars, trucks</div>
+          <div class="about-pt"><div class="about-dot"></div>Flexible scheduling, 7 days a week, early mornings to evenings</div>
+        </div>
+        <a href="contact.html" class="btn-p" style="margin-top:2.25rem;display:inline-flex">Book a Detail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY COOLMINT — frosted glass over photo bg -->
 <section class="why-sec">
   <div class="why-bg"></div>
@@ -457,19 +503,72 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 <section class="gal-sec">
   <div class="ct">
     <div class="s-tag pk">Our Work</div>
-    <h2 class="s-h">Detailing Results</h2>
-    <p class="s-p" style="max-width:540px">Real vehicles, real results. Every job reflects the level of care CoolMint brings to every detail.</p>
-    <div class="gal-grid">
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&h=450&q=80" alt="Car exterior detail"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=600&h=450&q=80" alt="Dark sports car"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&h=450&q=80" alt="Polished sports car"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&h=450&q=80" alt="Exterior hand wash"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&h=450&q=80" alt="Car close up detail"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=600&h=450&q=80" alt="Sports car front view"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&h=450&q=80" alt="Luxury car interior"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=600&h=450&q=80" alt="Dark car night shot"></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&h=450&q=80" alt="Premium vehicle shine"></div>
+    <h2 class="s-h">Real Cars. Real Results.</h2>
+    <p class="s-p" style="max-width:540px">Every photo represents a vehicle personally detailed by Sebastian. This is the standard CoolMint brings to every single appointment.</p>
+  </div>
+  <div class="stats-bar">
+    <div class="ct">
+      <div class="stats-g">
+        <div class="stat-it">
+          <div class="stat-num">500<span style="color:var(--mint)">+</span></div>
+          <div class="stat-lbl">Cars Detailed</div>
+        </div>
+        <div class="stat-it">
+          <div class="stat-num">400<span style="color:var(--mint)">+</span></div>
+          <div class="stat-lbl">Satisfied Clients</div>
+        </div>
+        <div class="stat-it">
+          <div class="stat-num">5.0<span style="color:var(--pink)">&#9733;</span></div>
+          <div class="stat-lbl">Google Rating</div>
+        </div>
+        <div class="stat-it">
+          <div class="stat-num">5<span style="color:var(--mint)">+</span></div>
+          <div class="stat-lbl">Years Experience</div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="gal-grid-full">
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&h=500&q=80" alt="Car detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=500&h=500&q=80" alt="Car exterior"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&h=500&q=80" alt="Polished exterior"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&h=500&q=80" alt="Car side profile"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&h=500&q=80" alt="Luxury car front"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=500&h=500&q=80" alt="Sports car aerial"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=500&h=500&q=80" alt="Night car shot"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=500&h=500&q=80" alt="Exterior hand wash"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=500&h=500&q=80" alt="Interior luxury"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&h=500&q=80" alt="Interior clean"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&h=500&q=80" alt="Polished paint"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=500&q=80" alt="Detail close up"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=500&h=500&q=80" alt="Sports car road"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=500&h=500&q=80" alt="Red sports car"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Car rear detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Car roof"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Car front left"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Rear bumper"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Car wheel arch"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Car top view"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Car door detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Hood wash"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Dashboard clean"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Seat detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Paint shine"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Mirror detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Car side panel"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Sports car rear"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Dark car low shot"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Car spoiler"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="BMW roof detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Porsche side"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Headlight detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Aerial car detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Night wheel shot"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Hand dry detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Floor mat detail"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Center console"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Paint correction"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Trim detail"></div>
   </div>
 </section>
 
@@ -592,7 +691,11 @@ gsap.from('.hero-ph',{opacity:0,y:12,duration:.7,delay:1.05,ease});
 gsap.utils.toArray('.svc-card').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 88%'},opacity:0,y:30,duration:.65,delay:i*.07,ease}));
 gsap.utils.toArray('.why-pt').forEach((p,i)=>gsap.from(p,{scrollTrigger:{trigger:p,start:'top 90%'},opacity:0,x:-18,duration:.6,delay:i*.06,ease}));
 gsap.from('.why-img',{scrollTrigger:{trigger:'.why-g',start:'top 82%'},opacity:0,x:-30,duration:.8,ease});
-gsap.from('.gal-it',{scrollTrigger:{trigger:'.gal-grid',start:'top 80%'},opacity:0,y:22,duration:.6,stagger:.07,ease});
+gsap.from('.about-img1',{scrollTrigger:{trigger:'.about-g',start:'top 82%'},opacity:0,x:-28,duration:.8,ease});
+gsap.from('.about-img2',{scrollTrigger:{trigger:'.about-g',start:'top 75%'},opacity:0,x:-18,y:18,duration:.8,delay:.15,ease});
+gsap.utils.toArray('.about-txt .s-tag,.about-txt .s-h,.about-txt .s-p,.about-pts').forEach((el,i)=>gsap.from(el,{scrollTrigger:{trigger:'.about-txt',start:'top 85%'},opacity:0,x:20,duration:.7,delay:i*.1,ease}));
+gsap.from('.stat-it',{scrollTrigger:{trigger:'.stats-bar',start:'top 88%'},opacity:0,y:20,duration:.6,stagger:.08,ease});
+gsap.from('.gal-it-full',{scrollTrigger:{trigger:'.gal-grid-full',start:'top 88%'},opacity:0,duration:.5,stagger:.025,ease});
 gsap.utils.toArray('.ar-chip').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 92%'},opacity:0,y:10,duration:.45,delay:i*.03,ease}));
 gsap.from('.cta-glass',{scrollTrigger:{trigger:'.cta-sec',start:'top 80%'},opacity:0,y:28,duration:.75,ease});
 </script>
