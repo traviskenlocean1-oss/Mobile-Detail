@@ -13,7 +13,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -66,22 +66,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.6);transform:scale(1.03)}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.75) 0%,rgba(0,0,0,.18) 65%,rgba(0,0,0,.04) 100%)}
-.hero-pk{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 0% 100%,rgba(255,107,157,.2) 0%,transparent 60%);pointer-events:none;z-index:1}
-.hero-tl{position:absolute;inset:0;background:radial-gradient(ellipse 45% 45% at 100% 5%,rgba(0,212,196,.13) 0%,transparent 60%);pointer-events:none;z-index:1}
-.hero-ct{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 2.5rem;width:100%;padding-top:80px}
-.trust-row{display:flex;align-items:center;gap:.65rem;margin-bottom:1.85rem;flex-wrap:wrap}
-.trust-chip{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,0,0,.28);backdrop-filter:blur(8px);border:1px solid rgba(255,107,157,.3);border-radius:100px;padding:.35rem 1rem;font-size:.79rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.04em}
-.hero h1{font-size:clamp(3.1rem,5.8vw,78px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:1.4rem;max-width:760px}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.5);transform:scale(1.03)}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.5) 0%,rgba(0,0,0,.18) 45%,rgba(0,0,0,.52) 100%)}
+.hero-pk{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 5% 95%,rgba(255,107,157,.22) 0%,transparent 60%);pointer-events:none;z-index:1}
+.hero-tl{position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 95% 5%,rgba(0,212,196,.18) 0%,transparent 60%);pointer-events:none;z-index:1}
+.hero-ct{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:0 2.5rem;width:100%;padding-top:80px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:.65rem;margin-bottom:2.2rem;flex-wrap:wrap}
+.trust-chip{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,0,0,.38);backdrop-filter:blur(10px);border:1px solid rgba(255,107,157,.38);border-radius:100px;padding:.38rem 1.1rem;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.92);letter-spacing:.04em}
+.hero h1{font-family:'Bebas Neue',var(--fh);font-size:clamp(4.8rem,12vw,152px);font-weight:400;color:#fff;line-height:.92;margin-bottom:1.6rem;max-width:100%;letter-spacing:.015em;text-shadow:0 4px 48px rgba(0,0,0,.35)}
 .hero h1 span{background:linear-gradient(135deg,var(--pink),var(--mint));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:1.18rem;color:rgba(255,255,255,.7);max-width:560px;line-height:1.78;margin-bottom:2.5rem}
-.hero-btns{display:flex;gap:1.1rem;flex-wrap:wrap}
-.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:#000;font-weight:800;font-size:1.05rem;padding:1rem 2.2rem;border-radius:2px;letter-spacing:.04em;box-shadow:0 4px 22px rgba(0,212,196,.32);transition:transform .2s,box-shadow .2s}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 7px 30px rgba(0,212,196,.5)}
-.btn-o{display:inline-flex;align-items:center;gap:.55rem;background:transparent;color:#fff;font-weight:600;font-size:1.05rem;padding:1rem 2.2rem;border-radius:2px;border:1.5px solid rgba(255,255,255,.35);letter-spacing:.04em;transition:background .2s,border-color .2s}
-.btn-o:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.6)}
-.hero-ph{display:flex;align-items:center;gap:.55rem;margin-top:2rem;color:rgba(255,255,255,.48);font-size:.95rem}
+.hero p{font-size:.95rem;color:rgba(255,255,255,.78);max-width:720px;line-height:1.7;margin-bottom:3rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center}
+.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:#000;font-weight:800;font-size:1.05rem;padding:1rem 2.5rem;border-radius:100px;letter-spacing:.04em;box-shadow:0 4px 30px rgba(0,212,196,.42);transition:transform .2s,box-shadow .2s}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,212,196,.62)}
+.btn-o{display:inline-flex;align-items:center;gap:.55rem;background:rgba(0,0,0,.4);backdrop-filter:blur(10px);color:#fff;font-weight:700;font-size:1.05rem;padding:1rem 2.5rem;border-radius:100px;border:1.5px solid rgba(255,255,255,.48);letter-spacing:.04em;transition:background .2s,border-color .2s}
+.btn-o:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.8)}
+.hero-ph{display:flex;align-items:center;justify-content:center;gap:.55rem;margin-top:2rem;color:rgba(255,255,255,.5);font-size:.95rem}
 .hero-ph a{color:var(--mint);font-weight:700;font-size:1.05rem}
 
 /* QUICK REQUEST */
@@ -217,6 +217,20 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 .modal-close{position:absolute;top:-.85rem;right:-.85rem;width:38px;height:38px;background:#111;border:1.5px solid rgba(255,255,255,.12);border-radius:50%;cursor:pointer;font-size:1rem;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.5);transition:background .2s}
 .modal-close:hover{background:#1a1a1a}
 
+/* ANIMATED PILL */
+.anim-pill{display:inline-block;position:relative;padding:.62rem 1.75rem;border-radius:100px;font-size:1rem;font-weight:800;color:var(--mint);letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.35rem}
+.anim-pill::after{content:'';position:absolute;inset:0;border-radius:100px;border:2px solid currentColor;clip-path:inset(0 100% 0 0 round 100px)}
+.anim-pill.active::after{clip-path:inset(0 0% 0 0 round 100px);transition:clip-path 1.1s ease}
+.anim-pill.pk{color:var(--pink)}
+
+/* VIDEO PLACEHOLDER */
+.vid-wrap{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9;background:var(--dark2);border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 70px rgba(0,0,0,.7)}
+.vid-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.vid-play-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.vid-play-ic{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--sky));display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(0,212,196,.16),0 8px 40px rgba(0,212,196,.45);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.vid-play-ic:hover{transform:scale(1.1);box-shadow:0 0 0 22px rgba(0,212,196,.1),0 14px 55px rgba(0,212,196,.55)}
+.vid-lbl{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.12em;text-transform:uppercase}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .svc-grid{grid-template-columns:repeat(2,1fr);border:none;gap:1px}
@@ -224,7 +238,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   .svc-card:last-child{border-bottom:none}
   .ft-g{grid-template-columns:1fr 1fr}
   .why-g{grid-template-columns:1fr}
-  .why-img{height:320px}
+  .vid-wrap{aspect-ratio:16/9}
   .rev-c{flex:0 0 calc(50% - .75rem)}
   .about-g{grid-template-columns:1fr}
   .about-imgs{height:380px;margin-bottom:2rem}
@@ -350,14 +364,14 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <div class="trust-chip">5-Star Verified</div>
       <div class="trust-chip">We Come To You</div>
     </div>
-    <h1>Premium Mobile<br>Detailing That<br><span>Comes To You</span></h1>
-    <p>CoolMint Mobile Car Detailing brings professional interior and exterior detailing straight to your driveway, job, or anywhere in Pembroke Pines and South Florida.</p>
+    <h1>South Florida's Best<br><span>Mobile Detailing</span></h1>
+    <p>South Florida's Top-Rated Mobile Detailer &mdash; Trusted With 5-Star Google Reviews &middot; We Come To You</p>
     <div class="hero-btns">
-      <a href="tel:9373031014" class="btn-p">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <a href="contact.html" class="btn-p">Book a Detail</a>
+      <a href="tel:9373031014" class="btn-o">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         Call Now
       </a>
-      <a href="services.html" class="btn-o">View Services</a>
     </div>
     <div class="hero-ph">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -430,7 +444,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
         <img class="about-img2" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&h=440&q=80" alt="Exterior hand wash">
       </div>
       <div class="about-txt">
-        <div class="s-tag pk">About CoolMint</div>
+        <div class="anim-pill pk" id="aboutPill">About CoolMint</div>
         <h2 class="s-h">South Florida's Premier<br>Mobile Detailing</h2>
         <p class="s-p" style="margin-bottom:1.2rem">Sebastian founded CoolMint with one promise &mdash; bring showroom-quality detailing straight to your door. No shop visits. No waiting. Just elite results at your location, on your schedule.</p>
         <p class="s-p" style="margin-bottom:1.75rem">With years of hands-on experience and a relentless eye for detail, Sebastian has earned the trust of hundreds of clients across South Florida. Every vehicle gets the same focused care &mdash; from quick interior refreshes to full exterior transformations.</p>
@@ -446,33 +460,41 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   </div>
 </section>
 
-<!-- WHY COOLMINT — frosted glass over photo bg -->
+<!-- WHY COOLMINT — text + video -->
 <section class="why-sec">
   <div class="why-bg"></div>
   <div class="ct">
     <div class="why-g">
-      <img class="why-img" src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=700&h=600&q=80" alt="CoolMint Detailing Work">
       <div class="why-glass">
-        <div class="s-tag">Why CoolMint</div>
+        <div class="anim-pill pk" id="whyPill">Why CoolMint?</div>
         <h2 class="s-h">Why Drivers<br>Choose CoolMint</h2>
-        <p class="s-p">Sebastian and the CoolMint team are built around one thing: showing up, doing the work right, and leaving every vehicle spotless.</p>
+        <p class="s-p" style="margin-bottom:1.75rem">Our team uses proven techniques and premium products. We come to you — whether at home, at work, or anywhere else — fully equipped to deliver top-quality results every time.</p>
         <div class="why-pts">
           <div class="why-pt">
-            <div class="why-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg></div>
-            <div><div class="why-tt">Mobile Service &mdash; We Come To You</div><p class="why-ds">No driving to a shop. We bring professional detailing straight to your home, job, or any location you choose.</p></div>
+            <div class="why-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><div class="why-tt">Convenience at your doorstep</div><p class="why-ds">You relax, we take care of your car at your home, office, or any location you need us.</p></div>
           </div>
           <div class="why-pt">
-            <div class="why-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-            <div><div class="why-tt">Exceptional Attention to Detail</div><p class="why-ds">Every corner, every surface. CoolMint does not rush. We do not leave until the work is done right.</p></div>
+            <div class="why-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><div class="why-tt">Time-saving &mdash; no shop, no waiting</div><p class="why-ds">No driving anywhere. We perform the detailing on your schedule, wherever it suits you.</p></div>
           </div>
           <div class="why-pt">
-            <div class="why-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div><div class="why-tt">On-Time, Every Appointment</div><p class="why-ds">We show up when we say we will. No waiting, no guessing. Reliable scheduling you can count on.</p></div>
+            <div class="why-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><div class="why-tt">Tailored packages for every vehicle</div><p class="why-ds">Customized service based on your vehicle's condition and exactly what you need done.</p></div>
           </div>
           <div class="why-pt">
-            <div class="why-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div><div class="why-tt">Spotless Results, Every Time</div><p class="why-ds">Customers keep booking again because the results speak for themselves. The work always shows.</p></div>
+            <div class="why-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><div class="why-tt">Quality without compromise</div><p class="why-ds">Premium products, professional technique, and relentless attention to detail — every single time.</p></div>
           </div>
+        </div>
+      </div>
+      <div class="vid-wrap">
+        <img class="vid-poster" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=506&q=80" alt="CoolMint detailing work video">
+        <div class="vid-play-wrap">
+          <div class="vid-play-ic">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#000"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="vid-lbl">Watch Our Work</span>
         </div>
       </div>
     </div>
@@ -693,7 +715,9 @@ gsap.utils.toArray('.why-pt').forEach((p,i)=>gsap.from(p,{scrollTrigger:{trigger
 gsap.from('.why-img',{scrollTrigger:{trigger:'.why-g',start:'top 82%'},opacity:0,x:-30,duration:.8,ease});
 gsap.from('.about-img1',{scrollTrigger:{trigger:'.about-g',start:'top 82%'},opacity:0,x:-28,duration:.8,ease});
 gsap.from('.about-img2',{scrollTrigger:{trigger:'.about-g',start:'top 75%'},opacity:0,x:-18,y:18,duration:.8,delay:.15,ease});
-gsap.utils.toArray('.about-txt .s-tag,.about-txt .s-h,.about-txt .s-p,.about-pts').forEach((el,i)=>gsap.from(el,{scrollTrigger:{trigger:'.about-txt',start:'top 85%'},opacity:0,x:20,duration:.7,delay:i*.1,ease}));
+gsap.utils.toArray('.about-txt .s-h,.about-txt .s-p,.about-pts').forEach((el,i)=>gsap.from(el,{scrollTrigger:{trigger:'.about-txt',start:'top 85%'},opacity:0,x:20,duration:.7,delay:i*.1,ease}));
+ScrollTrigger.create({trigger:'#aboutPill',start:'top 88%',onEnter:()=>document.getElementById('aboutPill').classList.add('active')});
+ScrollTrigger.create({trigger:'#whyPill',start:'top 88%',onEnter:()=>document.getElementById('whyPill').classList.add('active')});
 gsap.from('.stat-it',{scrollTrigger:{trigger:'.stats-bar',start:'top 88%'},opacity:0,y:20,duration:.6,stagger:.08,ease});
 gsap.from('.gal-it-full',{scrollTrigger:{trigger:'.gal-grid-full',start:'top 88%'},opacity:0,duration:.5,stagger:.025,ease});
 gsap.utils.toArray('.ar-chip').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 92%'},opacity:0,y:10,duration:.45,delay:i*.03,ease}));
