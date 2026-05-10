@@ -310,6 +310,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li class="drop-wrap">
         <span class="drop-lbl">Service Areas <span class="drop-arr">&#9660;</span></span>
         <div class="nav-drop">
@@ -488,9 +489,9 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
           </div>
         </div>
       </div>
-      <div class="vid-wrap">
+      <div class="vid-wrap" id="vidWrap">
         <img class="vid-poster" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=506&q=80" alt="CoolMint detailing work video">
-        <div class="vid-play-wrap">
+        <div class="vid-play-wrap" onclick="playVid()" style="cursor:pointer">
           <div class="vid-play-ic">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="#000"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
@@ -642,7 +643,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
         </a>
         <p>Professional mobile car detailing serving Pembroke Pines and South Florida. We come to you and leave your vehicle spotless every time.</p>
       </div>
-      <div><div class="ft-h">Navigation</div><ul class="ft-ul"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="ft-h">Navigation</div><ul class="ft-ul"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><div class="ft-h">Services</div><ul class="ft-ul"><li><a href="services.html">Interior Detailing</a></li><li><a href="services.html">Exterior Detailing</a></li><li><a href="services.html">Full Detail Package</a></li><li><a href="services.html">Maintenance Detail</a></li></ul></div>
       <div><div class="ft-h">Contact</div><div class="ft-inf"><a href="tel:9373031014">(937) 303-1014</a><a href="sms:9373031014">Text Us</a><a href="https://wa.me/19373031014" target="_blank" rel="noopener">WhatsApp</a><div>Pembroke Pines, FL</div><div>Mon &ndash; Sun &middot; 8am &ndash; 7pm</div></div></div>
     </div>
@@ -722,6 +723,7 @@ gsap.from('.stat-it',{scrollTrigger:{trigger:'.stats-bar',start:'top 88%'},opaci
 gsap.from('.gal-it-full',{scrollTrigger:{trigger:'.gal-grid-full',start:'top 88%'},opacity:0,duration:.5,stagger:.025,ease});
 gsap.utils.toArray('.ar-chip').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 92%'},opacity:0,y:10,duration:.45,delay:i*.03,ease}));
 gsap.from('.cta-glass',{scrollTrigger:{trigger:'.cta-sec',start:'top 80%'},opacity:0,y:28,duration:.75,ease});
+function playVid(){const w=document.getElementById('vidWrap');w.innerHTML='<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/mttSRt7gDLs?autoplay=1&rel=0&modestbranding=1" allow="autoplay;encrypted-media;fullscreen" allowfullscreen></iframe>';}
 </script>
 </body>
 </html>
