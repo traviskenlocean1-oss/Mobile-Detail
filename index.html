@@ -25,36 +25,34 @@
   --fh:'Poppins',sans-serif
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--fh);font-size:17px;color:#444;background:#fff;overflow-x:hidden}
+body{font-family:var(--fh);font-size:17px;color:rgba(255,255,255,.72);background:var(--black);overflow-x:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);height:80px;display:flex;align-items:center}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);height:80px;display:flex;align-items:center}
 .nav-in{max-width:1280px;margin:0 auto;padding:0 2.5rem;width:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .logo{display:flex;align-items:center;gap:.85rem}
 .logo-icon{width:54px;height:54px;flex-shrink:0}
 .logo-text{display:flex;flex-direction:column;line-height:1.1}
 .logo-main{font-weight:900;font-size:1.5rem;background:linear-gradient(135deg,var(--mint),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.logo-sub{font-size:.58rem;font-weight:500;color:rgba(0,0,0,.38);letter-spacing:.13em;text-transform:uppercase}
+.logo-sub{font-size:.58rem;font-weight:500;color:rgba(255,255,255,.35);letter-spacing:.13em;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
 .nav-links>li{position:relative}
-.nav-links a{font-size:1rem;font-weight:500;color:rgba(0,0,0,.65);transition:color .2s}
-.nav-links a:hover{color:#000}
-/* dropdown */
+.nav-links a{font-size:1rem;font-weight:500;color:rgba(255,255,255,.65);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
 .drop-wrap{cursor:default}
-.drop-lbl{display:flex;align-items:center;gap:.3rem;font-size:1rem;font-weight:500;color:rgba(0,0,0,.65);transition:color .2s}
-.drop-lbl:hover{color:#000}
+.drop-lbl{display:flex;align-items:center;gap:.3rem;font-size:1rem;font-weight:500;color:rgba(255,255,255,.65);transition:color .2s}
+.drop-lbl:hover{color:#fff}
 .drop-arr{font-size:.65rem;opacity:.5;transition:transform .2s}
 .drop-wrap:hover .drop-arr{transform:rotate(180deg)}
-.nav-drop{position:absolute;top:calc(100% + 14px);left:-1rem;background:#fff;border:1px solid rgba(0,0,0,.09);border-radius:3px;padding:.5rem 0;min-width:220px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.nav-drop{position:absolute;top:calc(100% + 14px);left:-1rem;background:rgba(4,4,4,.97);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:.5rem 0;min-width:220px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 20px 50px rgba(0,0,0,.7)}
 .drop-wrap:hover .nav-drop{opacity:1;visibility:visible;transform:translateY(0)}
-.nav-drop a{display:block;padding:.55rem 1.3rem;font-size:.88rem;font-weight:500;color:rgba(0,0,0,.6);transition:color .15s,background .15s}
+.nav-drop a{display:block;padding:.55rem 1.3rem;font-size:.88rem;font-weight:500;color:rgba(255,255,255,.6);transition:color .15s,background .15s}
 .nav-drop a:hover{color:var(--mint);background:rgba(0,212,196,.06)}
-/* social icons */
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-socials{display:flex;align-items:center;gap:.6rem}
-.soc-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.09);transition:background .2s,border-color .2s,transform .18s}
+.soc-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);transition:background .2s,border-color .2s,transform .18s}
 .soc-ic:hover{transform:translateY(-2px)}
 .soc-ic.ig:hover{background:rgba(225,48,108,.2);border-color:rgba(225,48,108,.45)}
 .soc-ic.fb:hover{background:rgba(24,119,242,.2);border-color:rgba(24,119,242,.45)}
@@ -62,20 +60,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .nav-cta{background:linear-gradient(135deg,var(--mint),var(--sky));color:#000!important;font-weight:700!important;font-size:.92rem!important;padding:.65rem 1.6rem!important;border-radius:2px;letter-spacing:.04em;box-shadow:0 3px 16px rgba(0,212,196,.28);transition:transform .2s,box-shadow .2s!important;white-space:nowrap}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 5px 22px rgba(0,212,196,.45)!important}
 .nav-tog{display:none;background:none;border:none;cursor:pointer;padding:.4rem;flex-direction:column;gap:5px}
-.nav-tog span{display:block;width:26px;height:2px;background:rgba(0,0,0,.7);border-radius:1px}
+.nav-tog span{display:block;width:26px;height:2px;background:rgba(255,255,255,.8);border-radius:1px}
 
-/* HERO */
+/* HERO — VIDEO BG */
 .hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.5);transform:scale(1.03)}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.5) 0%,rgba(0,0,0,.18) 45%,rgba(0,0,0,.52) 100%)}
-.hero-pk{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 5% 95%,rgba(255,107,157,.22) 0%,transparent 60%);pointer-events:none;z-index:1}
-.hero-tl{position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 95% 5%,rgba(0,212,196,.18) 0%,transparent 60%);pointer-events:none;z-index:1}
-.hero-ct{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:0 2.5rem;width:100%;padding-top:80px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-vid{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.hero-vid iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100vh;min-width:177.77vh;transform:translate(-50%,-50%);pointer-events:none;filter:brightness(.45)}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,.65) 100%);z-index:1}
+.hero-pk{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 5% 95%,rgba(255,107,157,.18) 0%,transparent 60%);pointer-events:none;z-index:2}
+.hero-tl{position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 95% 5%,rgba(0,212,196,.15) 0%,transparent 60%);pointer-events:none;z-index:2}
+.hero-ct{position:relative;z-index:3;max-width:1400px;margin:0 auto;padding:0 2.5rem;width:100%;padding-top:80px;display:flex;flex-direction:column;align-items:center;text-align:center}
 .trust-row{display:flex;align-items:center;justify-content:center;gap:.65rem;margin-bottom:2.2rem;flex-wrap:wrap}
 .trust-chip{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,0,0,.38);backdrop-filter:blur(10px);border:1px solid rgba(255,107,157,.38);border-radius:100px;padding:.38rem 1.1rem;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.92);letter-spacing:.04em}
-.hero h1{font-family:'Bebas Neue',var(--fh);font-size:clamp(4.8rem,12vw,152px);font-weight:400;color:#fff;line-height:.92;margin-bottom:1.6rem;max-width:100%;letter-spacing:.015em;text-shadow:0 4px 48px rgba(0,0,0,.35)}
+.hero h1{font-family:'Bebas Neue',var(--fh);font-size:clamp(5rem,14vw,172px);font-weight:400;color:#fff;line-height:.9;margin-bottom:1.6rem;letter-spacing:.02em;text-shadow:0 4px 60px rgba(0,0,0,.4)}
 .hero h1 span{background:linear-gradient(135deg,var(--pink),var(--mint));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:.95rem;color:rgba(255,255,255,.78);max-width:720px;line-height:1.7;margin-bottom:3rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.hero p{font-size:.88rem;color:rgba(255,255,255,.75);max-width:640px;line-height:1.7;margin-bottom:3rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
 .hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center}
 .btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:#000;font-weight:800;font-size:1.05rem;padding:1rem 2.5rem;border-radius:100px;letter-spacing:.04em;box-shadow:0 4px 30px rgba(0,212,196,.42);transition:transform .2s,box-shadow .2s}
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,212,196,.62)}
@@ -85,14 +84,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .hero-ph a{color:var(--mint);font-weight:700;font-size:1.05rem}
 
 /* QUICK REQUEST */
-.qr{background:#f5f5f5;border-bottom:1px solid rgba(0,0,0,.07);padding:3rem 0}
+.qr{background:#080808;border-bottom:1px solid rgba(255,255,255,.06);padding:3rem 0}
 .qr-in{max-width:1280px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
 .qr-lbl{font-size:.7rem;font-weight:700;color:var(--pink);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.35rem}
-.qr-ttl{font-size:1.45rem;font-weight:800;color:#0a0a0a}
+.qr-ttl{font-size:1.45rem;font-weight:800;color:#fff}
 .qr-form{display:flex;gap:.8rem;flex:1;flex-wrap:wrap}
-.qr-form input{flex:1;min-width:180px;height:56px;background:#fff;border:1.5px solid rgba(0,0,0,.12);border-radius:2px;padding:0 1.1rem;font-size:.95rem;color:#0a0a0a;font-family:var(--fh);outline:none;transition:border-color .2s}
+.qr-form input{flex:1;min-width:180px;height:56px;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:2px;padding:0 1.1rem;font-size:.95rem;color:#fff;font-family:var(--fh);outline:none;transition:border-color .2s}
 .qr-form input:focus{border-color:var(--mint)}
-.qr-form input::placeholder{color:rgba(0,0,0,.3)}
+.qr-form input::placeholder{color:rgba(255,255,255,.3)}
 .btn-send{height:56px;padding:0 2.2rem;background:linear-gradient(135deg,var(--mint),var(--sky));color:#000;font-family:var(--fh);font-weight:800;font-size:.95rem;border:none;border-radius:2px;cursor:pointer;letter-spacing:.06em;box-shadow:0 3px 14px rgba(0,212,196,.28);transition:transform .2s,box-shadow .2s}
 .btn-send:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(0,212,196,.42)}
 
@@ -102,36 +101,73 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .s-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.73rem;font-weight:700;color:var(--mint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.9rem}
 .s-tag::before{content:'';width:20px;height:2px;background:currentColor;border-radius:2px;display:inline-block}
 .s-tag.pk{color:var(--pink)}
-.s-h{font-size:clamp(2.1rem,4.2vw,54px);font-weight:800;color:#0a0a0a;line-height:1.08;margin-bottom:1.1rem}
-.s-p{font-size:1.02rem;color:rgba(0,0,0,.52);line-height:1.78}
-.why-glass .s-h,.cta-glass .s-h{color:#fff}
-.why-glass .s-p,.cta-glass .s-p{color:rgba(255,255,255,.52)}
+.s-h{font-size:clamp(2.1rem,4.2vw,54px);font-weight:800;color:#fff;line-height:1.08;margin-bottom:1.1rem}
+.s-p{font-size:1.02rem;color:rgba(255,255,255,.52);line-height:1.78}
 
-/* SERVICES */
-.svc-sec{background:#f8f8f8;padding:7rem 0}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 28px rgba(0,0,0,.06)}
-.svc-card{background:#fff;border-right:1px solid rgba(0,0,0,.08);overflow:hidden;transition:background .25s,box-shadow .25s}
-.svc-card:last-child{border-right:none}
-.svc-card:hover{background:#f9fffe;box-shadow:inset 0 -3px 0 var(--mint)}
-.svc-img{width:100%;height:210px;object-fit:cover}
-.svc-bd{padding:1.85rem}
-.svc-nm{font-size:1.1rem;font-weight:700;color:#0a0a0a;margin-bottom:.55rem}
-.svc-ds{font-size:.87rem;color:rgba(0,0,0,.52);line-height:1.7}
-.svc-lk{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-size:.82rem;font-weight:600;color:var(--mint);transition:gap .2s,color .2s}
-.svc-card:hover .svc-lk{color:var(--pink)}
-.svc-lk:hover{gap:.65rem}
+/* ANIM PILL */
+.anim-pill{display:inline-block;position:relative;padding:.62rem 1.75rem;border-radius:100px;font-size:1rem;font-weight:800;color:var(--mint);letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.35rem}
+.anim-pill::after{content:'';position:absolute;inset:0;border-radius:100px;border:2px solid currentColor;clip-path:inset(0 100% 0 0 round 100px)}
+.anim-pill.active::after{clip-path:inset(0 0% 0 0 round 100px);transition:clip-path 1.1s ease}
+.anim-pill.pk{color:var(--pink)}
+
+/* SERVICE BANDS — UNICK STYLE */
+.svc-bands-sec{background:#000}
+.svc-bands-hd{padding:5rem 0 0;text-align:center}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr}
+.svc-band{position:relative;height:380px;overflow:hidden;cursor:pointer;transition:height .48s cubic-bezier(.4,0,.2,1)}
+.svc-band:hover{height:530px}
+.svc-band-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .4s ease;transform:scale(1.06);filter:brightness(.38)}
+.svc-band:hover .svc-band-bg{transform:scale(1.0);filter:brightness(.22)}
+.svc-band-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.4) 50%,transparent 100%)}
+.svc-band-ct{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 3rem}
+.svc-num{font-family:'Bebas Neue',sans-serif;font-size:.95rem;color:var(--mint);letter-spacing:.2em;margin-bottom:.4rem}
+.svc-band-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,3vw,2.8rem);color:#fff;line-height:1;margin-bottom:.5rem}
+.svc-band-price{font-size:.78rem;font-weight:700;color:var(--mint);text-transform:uppercase;letter-spacing:.14em}
+.svc-band-details{overflow:hidden;max-height:0;opacity:0;transition:max-height .4s ease,opacity .3s ease .05s}
+.svc-band:hover .svc-band-details{max-height:220px;opacity:1}
+.svc-band-list{list-style:none;margin:1.2rem 0 1.5rem;display:flex;flex-direction:column;gap:.5rem}
+.svc-band-list li{font-size:.88rem;color:rgba(255,255,255,.72);display:flex;align-items:center;gap:.6rem}
+.svc-band-list li::before{content:'—';color:var(--mint);font-weight:700;flex-shrink:0}
+.svc-cta{display:inline-flex;align-items:center;gap:.45rem;background:var(--mint);color:#000;font-weight:800;font-size:.85rem;padding:.7rem 1.6rem;border-radius:100px;letter-spacing:.05em;transition:background .2s,transform .2s}
+.svc-cta:hover{background:var(--mintl);transform:translateY(-1px)}
+
+/* ABOUT */
+.about-sec{background:#0d0d0d;padding:7rem 0;overflow:hidden}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-imgs{position:relative;height:540px}
+.about-img1{position:absolute;left:0;top:0;width:72%;height:80%;object-fit:cover;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.about-img2{position:absolute;right:0;bottom:0;width:65%;height:72%;object-fit:cover;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.6);border:3px solid rgba(255,255,255,.08)}
+.about-pts{display:flex;flex-direction:column;gap:.9rem;margin-top:1.75rem}
+.about-pt{display:flex;align-items:flex-start;gap:.8rem;font-size:.93rem;color:rgba(255,255,255,.55);line-height:1.55}
+.about-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);flex-shrink:0;margin-top:.38rem}
 
 /* WHY — FROSTED GLASS OVER PHOTO */
 .why-sec{position:relative;padding:7rem 0;overflow:hidden}
 .why-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.18)}
 .why-g{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.why-img{width:100%;height:520px;object-fit:cover;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
-.why-glass{background:rgba(4,4,4,.7);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:3rem}
+.why-glass{background:rgba(4,4,4,.75);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:3rem}
 .why-pts{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
 .why-pt{display:flex;align-items:flex-start;gap:1.1rem}
 .why-ic{width:48px;height:48px;background:linear-gradient(135deg,var(--mint),var(--sky));border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 16px rgba(0,212,196,.22)}
 .why-tt{font-size:1.02rem;font-weight:700;color:#fff;margin-bottom:.25rem}
 .why-ds{font-size:.87rem;color:rgba(255,255,255,.48);line-height:1.68}
+.vid-wrap{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3;background:var(--dark2);border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 70px rgba(0,0,0,.7)}
+.vid-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.vid-play-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.vid-play-ic{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--sky));display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(0,212,196,.16),0 8px 40px rgba(0,212,196,.45);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.vid-play-ic:hover{transform:scale(1.1);box-shadow:0 0 0 22px rgba(0,212,196,.1),0 14px 55px rgba(0,212,196,.55)}
+.vid-lbl{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.12em;text-transform:uppercase}
+
+/* BEFORE / AFTER SLIDER */
+.ba-sec{background:#000;padding:7rem 0}
+.ba-wrap{position:relative;width:100%;height:500px;overflow:hidden;user-select:none;border-radius:4px;cursor:ew-resize;margin-top:3.5rem;touch-action:none}
+.ba-img-before,.ba-img-after{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba-img-after{clip-path:inset(0 50% 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;z-index:10;transform:translateX(-50%);pointer-events:none}
+.ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.ba-lbl{position:absolute;top:1.25rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:100px;pointer-events:none;z-index:5}
+.ba-lbl-before{left:1.25rem;background:rgba(0,0,0,.55);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.15)}
+.ba-lbl-after{right:1.25rem;background:var(--mint);color:#000}
 
 /* REVIEWS */
 .rev-sec{padding:7rem 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#FF6B9D 0%,#7B68EE 45%,#00D4C4 100%)}
@@ -154,39 +190,71 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .rev-all{font-weight:600;font-size:.92rem;color:#fff;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);padding:.65rem 1.6rem;border-radius:100px;transition:background .2s}
 .rev-all:hover{background:rgba(255,255,255,.25)}
 
-/* ABOUT */
-.about-sec{background:#fff;padding:7rem 0;overflow:hidden}
-.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.about-imgs{position:relative;height:540px}
-.about-img1{position:absolute;left:0;top:0;width:72%;height:80%;object-fit:cover;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.18)}
-.about-img2{position:absolute;right:0;bottom:0;width:65%;height:72%;object-fit:cover;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.18);border:4px solid #fff}
-.about-pts{display:flex;flex-direction:column;gap:.9rem;margin-top:1.75rem}
-.about-pt{display:flex;align-items:flex-start;gap:.8rem;font-size:.93rem;color:rgba(0,0,0,.62);line-height:1.55}
-.about-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);flex-shrink:0;margin-top:.38rem}
-
 /* GALLERY */
-.gal-sec{background:#f8f8f8;padding:7rem 0 0}
-.stats-bar{background:#ececec;border-top:1px solid rgba(0,0,0,.07);border-bottom:1px solid rgba(0,0,0,.07);margin-top:3.5rem}
+.gal-sec{background:#050505;padding:7rem 0 0}
+.stats-bar{background:#0a0a0a;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);margin-top:3.5rem}
 .stats-g{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-it{padding:2.25rem 1.5rem;text-align:center;border-right:1px solid rgba(0,0,0,.07)}
+.stat-it{padding:2.25rem 1.5rem;text-align:center;border-right:1px solid rgba(255,255,255,.06)}
 .stat-it:last-child{border-right:none}
-.stat-num{font-size:clamp(2.2rem,3.5vw,2.9rem);font-weight:900;color:#0a0a0a;line-height:1}
-.stat-lbl{font-size:.74rem;font-weight:600;color:rgba(0,0,0,.45);margin-top:.5rem;text-transform:uppercase;letter-spacing:.1em}
+.stat-num{font-size:clamp(2.2rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1}
+.stat-lbl{font-size:.74rem;font-weight:600;color:rgba(255,255,255,.38);margin-top:.5rem;text-transform:uppercase;letter-spacing:.1em}
 .gal-grid-full{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
 .gal-it-full{overflow:hidden;aspect-ratio:1/1}
 .gal-it-full img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
 .gal-it-full:hover img{transform:scale(1.07)}
 
-/* AREAS */
-.ar-sec{background:#fff;padding:7rem 0}
-.ar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2.75rem;border:1px solid rgba(0,0,0,.08)}
-.ar-chip{background:#fafafa;border-right:1px solid rgba(0,0,0,.08);border-bottom:1px solid rgba(0,0,0,.08);padding:1.1rem 1.25rem;text-align:center;font-size:.95rem;font-weight:600;color:rgba(0,0,0,.62);transition:background .2s,color .2s}
-.ar-chip:hover{background:rgba(0,212,196,.08);color:var(--mintd)}
+/* COMPARISON TABLE */
+.cmp-sec{background:#080808;padding:7rem 0}
+.cmp-wrap{overflow-x:auto;margin-top:3.5rem;border-radius:4px;border:1px solid rgba(255,255,255,.07)}
+.cmp-table{width:100%;border-collapse:collapse;min-width:600px}
+.cmp-table th,.cmp-table td{padding:1.15rem 1.6rem;text-align:center;border-bottom:1px solid rgba(255,255,255,.05);font-size:.92rem;color:rgba(255,255,255,.55)}
+.cmp-table td:first-child{text-align:left;color:rgba(255,255,255,.82);font-weight:600;font-size:.95rem}
+.cmp-table th{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:.05em;color:rgba(255,255,255,.45);background:#0d0d0d;padding-top:1.75rem;padding-bottom:1.75rem;border-bottom:2px solid rgba(255,255,255,.08)}
+.cmp-table th.hi{color:var(--mint);background:rgba(0,212,196,.06)}
+.cmp-table td.hi{color:var(--mint);background:rgba(0,212,196,.04);font-weight:700}
+.cmp-table tr:last-child td{border-bottom:none}
+.cmp-table tr:hover td{background:rgba(255,255,255,.02)}
+.cmp-table tr:hover td.hi{background:rgba(0,212,196,.07)}
+.cmp-hed{background:rgba(0,212,196,.08)!important}
 
-/* CTA — FROSTED GLASS */
+/* FAQ */
+.faq-sec{background:#050505;padding:7rem 0}
+.faq-hd{text-align:center;margin-bottom:3.5rem}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.faq-it{background:#080808;overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem;cursor:pointer;transition:background .2s;gap:1rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.faq-q:hover{background:rgba(255,255,255,.025)}
+.faq-it.open .faq-q{border-bottom-color:transparent}
+.faq-q-txt{font-size:.88rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.05em;line-height:1.45}
+.faq-ico{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.15rem;color:var(--mint);flex-shrink:0;transition:transform .25s,background .2s,border-color .2s;line-height:1}
+.faq-it.open .faq-ico{transform:rotate(45deg);background:rgba(0,212,196,.12);border-color:var(--mint)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;padding:0 2rem;font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.78}
+.faq-it.open .faq-a{max-height:200px;padding:.25rem 2rem 1.5rem}
+
+/* SOCIAL FOLLOW */
+.soc-sec{background:#000;padding:7rem 0}
+.soc-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.soc-handles{display:flex;gap:1rem;margin:1.75rem 0;flex-wrap:wrap}
+.soc-handle{display:inline-flex;align-items:center;gap:.65rem;padding:.8rem 1.6rem;border-radius:100px;font-weight:700;font-size:.9rem;transition:transform .2s,box-shadow .2s;letter-spacing:.04em}
+.soc-ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff}
+.soc-fb{background:#1877F2;color:#fff}
+.soc-handle:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.soc-photo{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5}
+.soc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.soc-photo:hover img{transform:scale(1.05)}
+.soc-tag-bar{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(135deg,var(--mint),var(--sky));padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.soc-tag-bar span{font-weight:800;font-size:.95rem;color:#000}
+
+/* SERVICE AREAS */
+.ar-sec{background:#0a0a0a;padding:7rem 0}
+.ar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2.75rem;border:1px solid rgba(255,255,255,.07)}
+.ar-chip{background:rgba(255,255,255,.025);border-right:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:1.1rem 1.25rem;text-align:center;font-size:.95rem;font-weight:600;color:rgba(255,255,255,.52);transition:background .2s,color .2s}
+.ar-chip:hover{background:rgba(0,212,196,.08);color:var(--mint)}
+
+/* CTA */
 .cta-sec{position:relative;padding:8rem 0;text-align:center;overflow:hidden}
 .cta-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80') center/cover;filter:brightness(.22)}
-.cta-glass{position:relative;z-index:2;max-width:680px;margin:0 auto;background:rgba(0,0,0,.6);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:4rem 3rem}
+.cta-glass{position:relative;z-index:2;max-width:680px;margin:0 auto;background:rgba(0,0,0,.62);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:4rem 3rem}
 .cta-line{width:60px;height:3px;background:linear-gradient(90deg,var(--pink),var(--mint));margin:0 auto 1.75rem;border-radius:2px}
 
 /* FOOTER */
@@ -201,7 +269,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 .ft-inf a{color:rgba(255,255,255,.46);display:block;transition:color .2s}
 .ft-inf a:hover{color:var(--mint)}
 .ft-bt{border-top:1px solid rgba(255,255,255,.05);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.ft-cp{font-size:.8rem;color:rgba(255,255,255,.22)}
+.ft-op{font-size:.8rem;color:rgba(255,255,255,.22)}
 .ft-socials{display:flex;align-items:center;gap:.6rem}
 .ft-soc{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .2s}
 .ft-soc:hover{background:rgba(255,255,255,.12)}
@@ -219,25 +287,9 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 .modal-close{position:absolute;top:-.85rem;right:-.85rem;width:38px;height:38px;background:#111;border:1.5px solid rgba(255,255,255,.12);border-radius:50%;cursor:pointer;font-size:1rem;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.5);transition:background .2s}
 .modal-close:hover{background:#1a1a1a}
 
-/* ANIMATED PILL */
-.anim-pill{display:inline-block;position:relative;padding:.62rem 1.75rem;border-radius:100px;font-size:1rem;font-weight:800;color:var(--mint);letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.35rem}
-.anim-pill::after{content:'';position:absolute;inset:0;border-radius:100px;border:2px solid currentColor;clip-path:inset(0 100% 0 0 round 100px)}
-.anim-pill.active::after{clip-path:inset(0 0% 0 0 round 100px);transition:clip-path 1.1s ease}
-.anim-pill.pk{color:var(--pink)}
-
-/* VIDEO PLACEHOLDER */
-.vid-wrap{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3;background:var(--dark2);border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 70px rgba(0,0,0,.7)}
-.vid-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
-.vid-play-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
-.vid-play-ic{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--sky));display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(0,212,196,.16),0 8px 40px rgba(0,212,196,.45);cursor:pointer;transition:transform .2s,box-shadow .2s}
-.vid-play-ic:hover{transform:scale(1.1);box-shadow:0 0 0 22px rgba(0,212,196,.1),0 14px 55px rgba(0,212,196,.55)}
-.vid-lbl{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.12em;text-transform:uppercase}
-
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .svc-grid{grid-template-columns:repeat(2,1fr);border:none;gap:1px}
-  .svc-card{border-right:none;border-bottom:1px solid rgba(0,0,0,.08)}
-  .svc-card:last-child{border-bottom:none}
+  .svc-grid{grid-template-columns:1fr}
   .ft-g{grid-template-columns:1fr 1fr}
   .why-g{grid-template-columns:1fr}
   .vid-wrap{aspect-ratio:16/9}
@@ -246,24 +298,29 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   .about-imgs{height:380px;margin-bottom:2rem}
   .stats-g{grid-template-columns:repeat(2,1fr)}
   .gal-grid-full{grid-template-columns:repeat(3,1fr)}
+  .faq-grid{grid-template-columns:1fr}
+  .soc-g{grid-template-columns:1fr;gap:3rem}
+  .soc-photo{aspect-ratio:16/9}
 }
 @media(max-width:768px){
-  .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:rgba(255,255,255,.98);flex-direction:column;padding:1.75rem 2.5rem;gap:1.5rem;border-bottom:1px solid rgba(0,0,0,.07)}
+  .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:rgba(0,0,0,.98);flex-direction:column;padding:1.75rem 2.5rem;gap:1.5rem}
   .nav-links.open{display:flex}
   .nav-tog{display:flex}
   .nav-socials{display:none}
   .nav-drop{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;padding:.2rem 0 0 1rem;box-shadow:none;min-width:auto}
-  .ar-grid{grid-template-columns:repeat(2,1fr);border:none;gap:1px}
+  .ar-grid{grid-template-columns:repeat(2,1fr)}
   .ar-chip{border-bottom:1px solid rgba(255,255,255,.06)}
   .gal-grid-full{grid-template-columns:repeat(2,1fr)}
   .rev-c{flex:0 0 100%}
   .qr-in{flex-direction:column;align-items:flex-start}
   .ft-g{grid-template-columns:1fr}
-  .hero h1{font-size:clamp(2.4rem,9vw,3.8rem)}
+  .hero h1{font-size:clamp(3.5rem,13vw,5.5rem)}
   .cta-glass{padding:2.5rem 1.5rem}
   .why-glass{padding:2rem}
-  .hero p{font-size:1.05rem}
-  .about-imgs{height:280px}
+  .ba-wrap{height:300px}
+  .svc-band{height:300px}
+  .svc-band:hover{height:480px}
+  .svc-band-ct{padding:1.5rem}
 }
 </style>
 </head>
@@ -289,9 +346,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   <div class="nav-in">
     <a href="index.html" class="logo">
       <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="lg1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="55%" stop-color="#48CAE4"/><stop offset="100%" stop-color="#00D4C4"/></linearGradient>
-        </defs>
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="55%" stop-color="#48CAE4"/><stop offset="100%" stop-color="#00D4C4"/></linearGradient></defs>
         <circle cx="22" cy="22" r="20.5" fill="url(#lg1)" opacity=".07"/>
         <circle cx="22" cy="22" r="20.5" fill="none" stroke="url(#lg1)" stroke-width="1.3"/>
         <circle cx="22" cy="22" r="15" fill="none" stroke="url(#lg1)" stroke-width=".4" stroke-dasharray="2.5 3.5" opacity=".35"/>
@@ -309,7 +364,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <div class="logo-text"><span class="logo-main">CoolMint</span><span class="logo-sub">Mobile Detailing</span></div>
     </a>
     <ul class="nav-links" id="nLinks">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="reviews.html">Reviews</a></li>
       <li><a href="gallery.html">Gallery</a></li>
@@ -352,9 +407,11 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — CINEMATIC VIDEO BACKGROUND -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-vid">
+    <iframe src="https://www.youtube.com/embed/_3W7tuxFYS8?autoplay=1&mute=1&loop=1&playlist=_3W7tuxFYS8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="CoolMint Detailing Video Background"></iframe>
+  </div>
   <div class="hero-ov"></div>
   <div class="hero-pk"></div>
   <div class="hero-tl"></div>
@@ -367,8 +424,8 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <div class="trust-chip">5-Star Verified</div>
       <div class="trust-chip">We Come To You</div>
     </div>
-    <h1>South Florida's Best<br><span>Mobile Detailing</span></h1>
-    <p>South Florida's Top-Rated Mobile Detailer &mdash; Trusted With 5-Star Google Reviews &middot; We Come To You</p>
+    <h1>WE COME<br><span>TO YOU.</span></h1>
+    <p>Pembroke Pines' Premier Mobile Detailer &mdash; Showroom Results At Your Door &middot; 5-Star Rated</p>
     <div class="hero-btns">
       <a href="contact.html" class="btn-p">Book a Detail</a>
       <a href="tel:9373031014" class="btn-o">
@@ -395,43 +452,89 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="svc-sec">
-  <div class="ct">
-    <div class="s-tag">Our Services</div>
-    <h2 class="s-h">Superior Mobile<br>Detailing Services</h2>
-    <p class="s-p" style="max-width:560px">From a quick interior refresh to a full exterior reset, CoolMint brings professional detailing directly to your door.</p>
-    <div class="svc-grid">
-      <div class="svc-card">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&h=250&q=80" alt="Interior Detailing">
-        <div class="svc-bd">
-          <div class="svc-nm">Interior Detailing</div>
-          <p class="svc-ds">Deep cleaning of seats, carpets, floor mats, door panels, console, vents, and all interior surfaces for a spotless cabin.</p>
-          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+<!-- SERVICE BANDS — UNICK STYLE -->
+<section class="svc-bands-sec">
+  <div class="svc-bands-hd">
+    <div class="ct" style="text-align:center">
+      <div class="s-tag" style="justify-content:center">Our Services</div>
+      <h2 class="s-h">Built Around<br><span style="background:linear-gradient(135deg,var(--pink),var(--mint));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Your Vehicle</span></h2>
+      <p class="s-p" style="max-width:520px;margin:0 auto 4rem">From a quick interior refresh to a showroom-grade full detail — we bring the results directly to you.</p>
+    </div>
+  </div>
+  <div class="svc-grid">
+    <!-- Band 1 -->
+    <div class="svc-band">
+      <img class="svc-band-bg" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=900&h=600&q=80" alt="Interior Detailing">
+      <div class="svc-band-ov"></div>
+      <div class="svc-band-ct">
+        <div class="svc-num">01</div>
+        <div class="svc-band-name">Interior Detailing</div>
+        <div class="svc-band-price">Starting at $80</div>
+        <div class="svc-band-details">
+          <ul class="svc-band-list">
+            <li>Deep vacuum of seats, carpets &amp; floor mats</li>
+            <li>Full interior wipe-down &amp; dashboard clean</li>
+            <li>Door panels, vents &amp; console detailing</li>
+            <li>Interior glass &amp; windows spotless</li>
+          </ul>
+          <a href="services.html" class="svc-cta">Book Interior Detail &rarr;</a>
         </div>
       </div>
-      <div class="svc-card">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&h=250&q=80" alt="Exterior Detailing">
-        <div class="svc-bd">
-          <div class="svc-nm">Exterior Detailing</div>
-          <p class="svc-ds">Hand wash, wheel and tire cleaning, tire shine, exterior glass, and a full refresh that makes your paint look sharp and clean.</p>
-          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+    </div>
+    <!-- Band 2 -->
+    <div class="svc-band">
+      <img class="svc-band-bg" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=600&q=80" alt="Exterior Detailing">
+      <div class="svc-band-ov"></div>
+      <div class="svc-band-ct">
+        <div class="svc-num">02</div>
+        <div class="svc-band-name">Exterior Detailing</div>
+        <div class="svc-band-price">Starting at $100</div>
+        <div class="svc-band-details">
+          <ul class="svc-band-list">
+            <li>Hand wash &amp; full exterior rinse</li>
+            <li>Wheel &amp; tire cleaning with tire shine</li>
+            <li>Exterior glass &amp; trim polished</li>
+            <li>Door jambs &amp; bumpers cleaned</li>
+          </ul>
+          <a href="services.html" class="svc-cta">Book Exterior Detail &rarr;</a>
         </div>
       </div>
-      <div class="svc-card">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&h=250&q=80" alt="Full Detail Package">
-        <div class="svc-bd">
-          <div class="svc-nm">Full Detail Package</div>
-          <p class="svc-ds">Complete interior and exterior service combined. The full reset for customers who want their vehicle looking its absolute best.</p>
-          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+    </div>
+    <!-- Band 3 -->
+    <div class="svc-band">
+      <img class="svc-band-bg" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&h=600&q=80" alt="Full Detail Package">
+      <div class="svc-band-ov"></div>
+      <div class="svc-band-ct">
+        <div class="svc-num">03</div>
+        <div class="svc-band-name">Full Detail Package</div>
+        <div class="svc-band-price">Starting at $160</div>
+        <div class="svc-band-details">
+          <ul class="svc-band-list">
+            <li>Complete interior &amp; exterior service</li>
+            <li>Everything in packages 01 &amp; 02</li>
+            <li>Clay bar treatment &amp; paint prep</li>
+            <li>The complete showroom reset</li>
+          </ul>
+          <a href="services.html" class="svc-cta">Book Full Detail &rarr;</a>
         </div>
       </div>
-      <div class="svc-card">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&h=250&q=80" alt="Maintenance Detail">
-        <div class="svc-bd">
-          <div class="svc-nm">Maintenance Detail</div>
-          <p class="svc-ds">A recurring light detail to keep your vehicle clean and fresh between deep cleans. Perfect for busy drivers who want to stay on top of it.</p>
-          <a href="services.html" class="svc-lk">Learn More &rarr;</a>
+    </div>
+    <!-- Band 4 -->
+    <div class="svc-band">
+      <img class="svc-band-bg" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&h=600&q=80" alt="Maintenance Detail">
+      <div class="svc-band-ov"></div>
+      <div class="svc-band-ct">
+        <div class="svc-num">04</div>
+        <div class="svc-band-name">Maintenance Detail</div>
+        <div class="svc-band-price">Starting at $60</div>
+        <div class="svc-band-details">
+          <ul class="svc-band-list">
+            <li>Recurring light detail between deep cleans</li>
+            <li>Interior wipe &amp; vacuum touch-up</li>
+            <li>Exterior wash &amp; tire shine</li>
+            <li>Perfect for busy clients on the go</li>
+          </ul>
+          <a href="services.html" class="svc-cta">Book Maintenance &rarr;</a>
         </div>
       </div>
     </div>
@@ -449,12 +552,12 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <div class="about-txt">
         <div class="anim-pill pk" id="aboutPill">About CoolMint</div>
         <h2 class="s-h">South Florida's Premier<br>Mobile Detailing</h2>
-        <p class="s-p" style="margin-bottom:1.2rem">Sebastian founded CoolMint with one promise &mdash; bring showroom-quality detailing straight to your door. No shop visits. No waiting. Just elite results at your location, on your schedule.</p>
-        <p class="s-p" style="margin-bottom:1.75rem">With years of hands-on experience and a relentless eye for detail, Sebastian has earned the trust of hundreds of clients across South Florida. Every vehicle gets the same focused care &mdash; from quick interior refreshes to full exterior transformations.</p>
+        <p class="s-p" style="margin-bottom:1.2rem">Sebastian founded CoolMint with one promise — bring showroom-quality detailing straight to your door. No shop visits. No waiting. Just elite results at your location, on your schedule.</p>
+        <p class="s-p" style="margin-bottom:1.75rem">With years of hands-on experience and a relentless eye for detail, Sebastian has earned the trust of hundreds of clients across South Florida. Every vehicle gets the same focused care — from quick interior refreshes to full exterior transformations.</p>
         <div class="about-pts">
-          <div class="about-pt"><div class="about-dot"></div>Mobile service &mdash; we come to your home, office, or any location</div>
+          <div class="about-pt"><div class="about-dot"></div>Mobile service — we come to your home, office, or any location</div>
           <div class="about-pt"><div class="about-dot"></div>Trusted by hundreds of clients across Broward &amp; Miami-Dade</div>
-          <div class="about-pt"><div class="about-dot"></div>All vehicles welcome &mdash; sedans, SUVs, luxury cars, trucks</div>
+          <div class="about-pt"><div class="about-dot"></div>All vehicles welcome — sedans, SUVs, luxury cars, trucks</div>
           <div class="about-pt"><div class="about-dot"></div>Flexible scheduling, 7 days a week, early mornings to evenings</div>
         </div>
         <a href="contact.html" class="btn-p" style="margin-top:2.25rem;display:inline-flex">Book a Detail</a>
@@ -479,7 +582,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
           </div>
           <div class="why-pt">
             <div class="why-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><div class="why-tt">Time-saving &mdash; no shop, no waiting</div><p class="why-ds">No driving anywhere. We perform the detailing on your schedule, wherever it suits you.</p></div>
+            <div><div class="why-tt">Time-saving — no shop, no waiting</div><p class="why-ds">No driving anywhere. We perform the detailing on your schedule, wherever it suits you.</p></div>
           </div>
           <div class="why-pt">
             <div class="why-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -492,12 +595,34 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
         </div>
       </div>
       <div class="vid-wrap" id="vidWrap">
-        <img class="vid-poster" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=506&q=80" alt="CoolMint detailing work video">
+        <img class="vid-poster" src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=675&q=80" alt="CoolMint detailing work video">
         <div class="vid-play-wrap" onclick="playVid()" style="cursor:pointer">
           <div class="vid-play-ic">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="#000"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
           <span class="vid-lbl">Watch Our Work</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER SLIDER -->
+<section class="ba-sec">
+  <div class="ct">
+    <div style="text-align:center">
+      <div class="s-tag pk" style="justify-content:center">See The Difference</div>
+      <h2 class="s-h">Before &amp; After</h2>
+      <p class="s-p" style="max-width:520px;margin:0 auto">Drag the handle to see the transformation. This is the CoolMint standard applied to every single vehicle.</p>
+    </div>
+    <div class="ba-wrap" id="baWrap">
+      <img class="ba-img-before" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&h=700&q=80" alt="Before detailing">
+      <img class="ba-img-after" id="baAfter" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&h=700&q=80" alt="After detailing">
+      <div class="ba-lbl ba-lbl-before">BEFORE</div>
+      <div class="ba-lbl ba-lbl-after">AFTER</div>
+      <div class="ba-handle" id="baHandle">
+        <div class="ba-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>
         </div>
       </div>
     </div>
@@ -566,7 +691,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&h=500&q=80" alt="Interior clean"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&h=500&q=80" alt="Polished paint"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=500&q=80" alt="Detail close up"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=500&h=500&q=80" alt="Sports car road"></div>
+    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1517524285303-d6fc683ddf8?auto=format&fit=crop&w=500&h=500&q=80" alt="Sports car road"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=500&h=500&q=80" alt="Red sports car"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Car rear detail"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Car roof"></div>
@@ -574,30 +699,144 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Rear bumper"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Car wheel arch"></div>
     <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Car top view"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Car door detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Hood wash"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Dashboard clean"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Seat detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Paint shine"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Mirror detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Car side panel"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Sports car rear"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Dark car low shot"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Car spoiler"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="BMW roof detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=500&h=500&q=80&crop=right" alt="Porsche side"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&h=500&q=80&crop=left" alt="Headlight detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Aerial car detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Night wheel shot"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Hand dry detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=500&h=500&q=80&crop=bottom" alt="Floor mat detail"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Center console"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=500&h=500&q=80&crop=top" alt="Paint correction"></div>
-    <div class="gal-it-full"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&h=500&q=80&crop=entropy" alt="Trim detail"></div>
+  </div>
+  <div style="text-align:center;padding:3rem 0;background:#050505"><a href="gallery.html" class="btn-p" style="display:inline-flex">View Full Gallery</a></div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="cmp-sec">
+  <div class="ct">
+    <div style="text-align:center">
+      <div class="s-tag" style="justify-content:center">Why Mobile</div>
+      <h2 class="s-h" style="text-align:center">Mobile Detailing vs<br>The Alternative</h2>
+      <p class="s-p" style="text-align:center;max-width:520px;margin:0 auto">Not all cleans are equal. Here's how CoolMint stacks up against the competition.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th style="text-align:left">Feature</th>
+            <th class="hi">CoolMint Mobile &#9733;</th>
+            <th>Traditional Car Wash</th>
+            <th>DIY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Comes to your location</td><td class="hi">&#10003; Always</td><td>&#10007;</td><td>&#10003;</td></tr>
+          <tr><td>Professional quality results</td><td class="hi">&#10003; Guaranteed</td><td>&#9888; Limited</td><td>&#9888; Varies</td></tr>
+          <tr><td>Deep interior clean</td><td class="hi">&#10003; Full service</td><td>&#10007;</td><td>&#9888; Difficult</td></tr>
+          <tr><td>Paint &amp; surface protection</td><td class="hi">&#10003; Included</td><td>&#10007;</td><td>&#9888; Optional</td></tr>
+          <tr><td>Your time required</td><td class="hi">Zero — we handle it</td><td>30–60 min wait</td><td>2–4 hours</td></tr>
+          <tr><td>Custom packages</td><td class="hi">&#10003; Tailored to you</td><td>&#10007;</td><td>N/A</td></tr>
+          <tr><td>5-Star verified rating</td><td class="hi">&#10003; 5.0 Google</td><td>Varies</td><td>N/A</td></tr>
+          <tr><td>Book by text or call</td><td class="hi">&#10003; Easy booking</td><td>&#10007;</td><td>N/A</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:3rem"><a href="contact.html" class="btn-p" style="display:inline-flex">Book CoolMint Today</a></div>
   </div>
 </section>
 
-<!-- AREAS -->
+<!-- FAQ -->
+<section class="faq-sec">
+  <div class="ct">
+    <div class="faq-hd">
+      <div class="s-tag" style="justify-content:center">Got Questions</div>
+      <h2 class="s-h" style="text-align:center">Frequently Asked<br>Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">How long does a detail take?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">Depending on the package and vehicle size, a standard detail takes 1.5–3 hours. A full detail on a larger vehicle may take up to 4 hours. We'll give you a time estimate when you book.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Do you come to my home or office?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">Yes — we come directly to you. Whether you're at home, at work, or anywhere else across South Florida, we bring all the equipment and supplies needed to complete the job on-site.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">What areas do you service?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">We serve Pembroke Pines, Miramar, Hollywood, Weston, Cooper City, Davie, Sunrise, Fort Lauderdale, Coral Springs, and surrounding areas in Broward and Miami-Dade County.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">What do I need to provide?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">Just your vehicle and access to a power outlet if available (for interior work). We bring all our own professional-grade supplies, equipment, and products — you don't need to provide anything.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">How do I book an appointment?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">The easiest way is to call or text Sebastian directly at (937) 303-1014. You can also fill out the contact form on our website. We typically respond within a few hours and get you scheduled fast.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Do you work on all vehicle types?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">Absolutely. We detail sedans, SUVs, trucks, minivans, luxury cars, sports cars, and everything in between. Pricing may vary slightly based on vehicle size — contact us for a free quote.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">How much does a detail cost?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">Pricing starts at $60 for a maintenance detail, $80 for interior, $100 for exterior, and $160 for a full detail package. Exact pricing depends on your vehicle size and condition — contact us for a custom quote.</div>
+      </div>
+      <div class="faq-it">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Are your products safe for my vehicle?</span>
+          <span class="faq-ico">+</span>
+        </div>
+        <div class="faq-a">Yes. We use professional-grade, pH-balanced detailing products that are safe for all paint types, leather, fabric, and trim surfaces. We never use harsh chemicals that could damage your vehicle's finish.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL FOLLOW US -->
+<section class="soc-sec">
+  <div class="ct">
+    <div class="soc-g">
+      <div class="soc-txt">
+        <div class="s-tag pk">Follow Us</div>
+        <h2 class="s-h">See The Work<br>On Social</h2>
+        <p class="s-p" style="margin-bottom:.5rem">Follow CoolMint for before &amp; afters, behind-the-scenes clips, and real results from real clients across South Florida. Updated regularly with fresh work.</p>
+        <div class="soc-handles">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="soc-handle soc-ig">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="#fff" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="#fff"/></svg>
+            @CoolMintDetail
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="soc-handle soc-fb">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            CoolMint Detailing
+          </a>
+        </div>
+        <a href="tel:9373031014" class="btn-p" style="display:inline-flex">Call to Book &rarr;</a>
+      </div>
+      <div class="soc-photo">
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=700&h=875&q=80" alt="CoolMint car detailing South Florida">
+        <div class="soc-tag-bar">
+          <span>CoolMint Mobile Detailing</span>
+          <span>Pembroke Pines, FL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
 <section class="ar-sec">
   <div class="ct">
     <div style="text-align:center">
@@ -617,7 +856,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   </div>
 </section>
 
-<!-- CTA — frosted glass over car bg -->
+<!-- CTA -->
 <section class="cta-sec">
   <div class="cta-bg"></div>
   <div class="ct">
@@ -625,7 +864,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <div class="cta-line"></div>
       <div class="s-tag" style="justify-content:center;color:var(--mint)">Book Today</div>
       <h2 class="s-h" style="text-align:center">Ready To Get Your Car<br>Looking Fresh Again?</h2>
-      <p class="s-p" style="text-align:center;max-width:460px;margin:1rem auto 2.5rem">Call or text Sebastian directly to ask about availability, packages, and mobile detailing near you.</p>
+      <p class="s-p" style="text-align:center;max-width:460px;margin:1rem auto 2.5rem;color:rgba(255,255,255,.52)">Call or text Sebastian directly to ask about availability, packages, and mobile detailing near you.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
         <a href="tel:9373031014" class="btn-p">Call Sebastian</a>
         <a href="sms:9373031014" class="btn-o">Text Now</a>
@@ -640,7 +879,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
     <div class="ft-g">
       <div class="ft-ab">
         <a href="index.html" class="logo">
-          <svg class="logo-icon" viewBox="0 0 44 44" fill="none"><defs><linearGradient id="lg2" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="55%" stop-color="#48CAE4"/><stop offset="100%" stop-color="#00D4C4"/></linearGradient></defs><circle cx="22" cy="22" r="20.5" fill="url(#lg2)" opacity=".07"/><circle cx="22" cy="22" r="20.5" fill="none" stroke="url(#lg2)" stroke-width="1.3"/><circle cx="22" cy="22" r="15" fill="none" stroke="url(#lg2)" stroke-width=".4" stroke-dasharray="2.5 3.5" opacity=".35"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="url(#lg2)" opacity=".11"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="none" stroke="url(#lg2)" stroke-width="1.2" stroke-linejoin="round"/><path d="M22 14.5C18.2 20.8 17 23.5 17 25.2A5 5 0 0022 30.2A5 5 0 0027 25.2C27 23.5 25.8 20.8 22 14.5Z" fill="url(#lg2)"/><ellipse cx="20.1" cy="23" rx="1.3" ry="2.2" fill="white" opacity=".28" transform="rotate(-18 20.1 23)"/><circle cx="12.5" cy="10" r="1.3" fill="#00D4C4" opacity=".78"/><circle cx="31" cy="9" r=".9" fill="#48CAE4" opacity=".78"/></svg>
+          <svg class="logo-icon" viewBox="0 0 44 44" fill="none"><defs><linearGradient id="lg2" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00D4C4"/><stop offset="55%" stop-color="#48CAE4"/><stop offset="100%" stop-color="#00D4C4"/></linearGradient></defs><circle cx="22" cy="22" r="20.5" fill="url(#lg2)" opacity=".07"/><circle cx="22" cy="22" r="20.5" fill="none" stroke="url(#lg2)" stroke-width="1.3"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="url(#lg2)" opacity=".11"/><path d="M22 7.5L11 12V23C11 29.5 15.8 34.5 22 37C28.2 34.5 33 29.5 33 23V12L22 7.5Z" fill="none" stroke="url(#lg2)" stroke-width="1.2" stroke-linejoin="round"/><path d="M22 14.5C18.2 20.8 17 23.5 17 25.2A5 5 0 0022 30.2A5 5 0 0027 25.2C27 23.5 25.8 20.8 22 14.5Z" fill="url(#lg2)"/></svg>
           <div class="logo-text"><span class="logo-main">CoolMint</span><span class="logo-sub">Mobile Detailing</span></div>
         </a>
         <p>Professional mobile car detailing serving Pembroke Pines and South Florida. We come to you and leave your vehicle spotless every time.</p>
@@ -650,7 +889,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
       <div><div class="ft-h">Contact</div><div class="ft-inf"><a href="tel:9373031014">(937) 303-1014</a><a href="sms:9373031014">Text Us</a><a href="https://wa.me/19373031014" target="_blank" rel="noopener">WhatsApp</a><div>Pembroke Pines, FL</div><div>Mon &ndash; Sun &middot; 8am &ndash; 7pm</div></div></div>
     </div>
     <div class="ft-bt">
-      <p class="ft-cp">&copy; 2025 CoolMint Mobile Car Detailing. All rights reserved. Serving Pembroke Pines, FL &amp; South Florida.</p>
+      <p class="ft-op">&copy; 2025 CoolMint Mobile Car Detailing. All rights reserved. Serving Pembroke Pines, FL &amp; South Florida.</p>
       <div class="ft-socials">
         <a href="https://instagram.com" target="_blank" rel="noopener" class="ft-soc" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="rgba(255,255,255,.45)" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="rgba(255,255,255,.45)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="rgba(255,255,255,.45)"/></svg></a>
         <a href="https://facebook.com" target="_blank" rel="noopener" class="ft-soc" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,.45)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -663,6 +902,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
+/* Reviews */
 const RV=[
   {n:"Maria G.",c:"#E91E8C",t:"Sebastian was amazing. Came right to my driveway and my car has never looked this clean. Truly professional service and I will be booking again every month."},
   {n:"Carlos R.",c:"#3F51B5",t:"Booked CoolMint for a full interior detail and was completely blown away. Every corner was spotless, the seats looked brand new. Will absolutely book again."},
@@ -675,23 +915,7 @@ const RV=[
   {n:"Sandra P.",c:"#FF9800",t:"Finally a detailer who actually communicates and shows up when they say they will. My car was a disaster inside and now it is absolutely perfect."},
   {n:"Kevin H.",c:"#2196F3",t:"CoolMint did my Chevy Silverado inside and out. The attention to detail is truly unmatched in this area. Already booked again for next month."},
   {n:"Lisa F.",c:"#E91E63",t:"Great experience from start to finish. Easy to book, showed up on time, fantastic clean results. Five stars every single time without question."},
-  {n:"Marcus B.",c:"#607D8B",t:"Had my whole family's cars done back to back. Every single one came out perfect. Sebastian is a hard worker who takes real pride in his craft."},
-  {n:"Tamara J.",c:"#9C27B0",t:"I was skeptical at first but after seeing the results I am a customer for life. The interior looks completely brand new. Truly impressive work."},
-  {n:"David C.",c:"#795548",t:"Professional, quick, and thorough. He did not miss a single spot. My car smells amazing and looks even better. Excellent service all around."},
-  {n:"Nicole A.",c:"#3F51B5",t:"Came highly recommended and did not disappoint at all. My car went from a complete disaster to showroom condition in just a few hours."},
-  {n:"Chris V.",c:"#009688",t:"The best money I have spent on my car in years. Showed up on time, communicated throughout the whole process, and the results were incredible."},
-  {n:"Patricia M.",c:"#FF5722",t:"Sebastian is extremely professional and detail-oriented. My Cadillac Escalade has never looked this clean in all the years I have owned it."},
-  {n:"James H.",c:"#673AB7",t:"Quick response, easy booking, and outstanding results every time. My white car shines like new again. Definitely a repeat customer going forward."},
-  {n:"Vanessa R.",c:"#F44336",t:"I had stains all over my seats from my kids and CoolMint got every single one out. I am truly amazed and will absolutely recommend to everyone I know."},
-  {n:"Eric D.",c:"#4CAF50",t:"Mobile detailing is so convenient and CoolMint makes it even better with their quality and professionalism. Gave my car a total fresh reset."},
-  {n:"Carmen S.",c:"#FF9800",t:"Booked for a maintenance detail and was surprised by how thorough it was. Not a single speck of dirt anywhere. Absolutely perfect clean."},
-  {n:"Brian T.",c:"#00BCD4",t:"Sebastian took great care of my Audi. Every detail was attended to with care and true professionalism. Fantastic service at a fair price."},
-  {n:"Michelle O.",c:"#E91E63",t:"Had my car detailed before selling it and the buyer could not believe how clean it was. CoolMint honestly helped me get a better price on the sale."},
-  {n:"Jordan W.",c:"#2196F3",t:"Great communication before, during, and after every appointment. My car always looks amazing. Already referred three friends who are now regulars."},
-  {n:"Stephanie G.",c:"#9C27B0",t:"The interior deep clean was absolutely incredible. I did not think my car could ever look like that again. Very happy customer who will be back soon."},
-  {n:"Tony F.",c:"#607D8B",t:"On time, professional, and the results were better than I expected every time. Highly recommend CoolMint to anyone looking for quality mobile detailing."},
-  {n:"Rachel N.",c:"#795548",t:"Easy to schedule, came right to my house, and did an outstanding job on my SUV. It looked brand new inside and out when he was finished."},
-  {n:"Victor L.",c:"#E91E8C",t:"Best detailing experience I have had in South Florida. Sebastian is clearly passionate about his work and it shows in every single result. Book him now."}
+  {n:"Marcus B.",c:"#607D8B",t:"Had my whole family's cars done back to back. Every single one came out perfect. Sebastian is a hard worker who takes real pride in his craft."}
 ];
 const GS=`<svg class="g-ico" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>`;
 const trk=document.getElementById('rTrk');
@@ -702,10 +926,46 @@ const shift=()=>{const w=(trk.children[0]?.offsetWidth||0)+24;trk.style.transfor
 document.getElementById('rNext').onclick=()=>{if(ri<RV.length-cpv()){ri++;shift();}};
 document.getElementById('rPrev').onclick=()=>{if(ri>0){ri--;shift();}};
 window.addEventListener('resize',()=>{ri=0;shift();});
+
+/* Modal */
 document.getElementById('mClose').onclick=()=>document.getElementById('modal').classList.add('gone');
 document.getElementById('modal').onclick=e=>{if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.add('gone');};
+
+/* Nav toggle */
 document.getElementById('nTog').onclick=()=>document.getElementById('nLinks').classList.toggle('open');
 
+/* Video click-to-play */
+function playVid(){const w=document.getElementById('vidWrap');w.innerHTML='<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/mttSRt7gDLs?autoplay=1&rel=0&modestbranding=1" allow="autoplay;encrypted-media;fullscreen" allowfullscreen></iframe>';}
+
+/* Before/After Slider */
+(function(){
+  const wrap=document.getElementById('baWrap');
+  const after=document.getElementById('baAfter');
+  const handle=document.getElementById('baHandle');
+  let drag=false;
+  function setPos(x){
+    const r=wrap.getBoundingClientRect();
+    const pct=Math.round(Math.max(2,Math.min(98,(x-r.left)/r.width*100)));
+    after.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    handle.style.left=pct+'%';
+  }
+  wrap.addEventListener('mousedown',e=>{drag=true;setPos(e.clientX);});
+  document.addEventListener('mouseup',()=>drag=false);
+  document.addEventListener('mousemove',e=>{if(drag)setPos(e.clientX);});
+  wrap.addEventListener('touchstart',e=>{drag=true;setPos(e.touches[0].clientX);},{passive:true});
+  document.addEventListener('touchend',()=>drag=false);
+  document.addEventListener('touchmove',e=>{if(drag)setPos(e.touches[0].clientX);},{passive:true});
+})();
+
+/* FAQ Accordion */
+function toggleFaq(el){
+  const item=el.parentElement;
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-it.open').forEach(i=>i.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+
+/* GSAP Animations */
 gsap.registerPlugin(ScrollTrigger);
 const ease='power2.out';
 gsap.from('.trust-row',{opacity:0,y:20,duration:.8,delay:.3,ease});
@@ -713,9 +973,8 @@ gsap.from('.hero h1',{opacity:0,y:38,duration:.9,delay:.5,ease});
 gsap.from('.hero p',{opacity:0,y:20,duration:.8,delay:.72,ease});
 gsap.from('.hero-btns',{opacity:0,y:18,duration:.75,delay:.9,ease});
 gsap.from('.hero-ph',{opacity:0,y:12,duration:.7,delay:1.05,ease});
-gsap.utils.toArray('.svc-card').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 88%'},opacity:0,y:30,duration:.65,delay:i*.07,ease}));
+gsap.utils.toArray('.svc-band').forEach((b,i)=>gsap.from(b,{scrollTrigger:{trigger:b,start:'top 90%'},opacity:0,y:30,duration:.65,delay:i*.06,ease}));
 gsap.utils.toArray('.why-pt').forEach((p,i)=>gsap.from(p,{scrollTrigger:{trigger:p,start:'top 90%'},opacity:0,x:-18,duration:.6,delay:i*.06,ease}));
-gsap.from('.why-img',{scrollTrigger:{trigger:'.why-g',start:'top 82%'},opacity:0,x:-30,duration:.8,ease});
 gsap.from('.about-img1',{scrollTrigger:{trigger:'.about-g',start:'top 82%'},opacity:0,x:-28,duration:.8,ease});
 gsap.from('.about-img2',{scrollTrigger:{trigger:'.about-g',start:'top 75%'},opacity:0,x:-18,y:18,duration:.8,delay:.15,ease});
 gsap.utils.toArray('.about-txt .s-h,.about-txt .s-p,.about-pts').forEach((el,i)=>gsap.from(el,{scrollTrigger:{trigger:'.about-txt',start:'top 85%'},opacity:0,x:20,duration:.7,delay:i*.1,ease}));
@@ -725,7 +984,10 @@ gsap.from('.stat-it',{scrollTrigger:{trigger:'.stats-bar',start:'top 88%'},opaci
 gsap.from('.gal-it-full',{scrollTrigger:{trigger:'.gal-grid-full',start:'top 88%'},opacity:0,duration:.5,stagger:.025,ease});
 gsap.utils.toArray('.ar-chip').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 92%'},opacity:0,y:10,duration:.45,delay:i*.03,ease}));
 gsap.from('.cta-glass',{scrollTrigger:{trigger:'.cta-sec',start:'top 80%'},opacity:0,y:28,duration:.75,ease});
-function playVid(){const w=document.getElementById('vidWrap');w.innerHTML='<iframe style="position:absolute;inset:0;width:100%;height:100%;border:none" src="https://www.youtube.com/embed/mttSRt7gDLs?autoplay=1&rel=0&modestbranding=1" allow="autoplay;encrypted-media;fullscreen" allowfullscreen></iframe>';}
+gsap.from('.ba-wrap',{scrollTrigger:{trigger:'.ba-sec',start:'top 80%'},opacity:0,y:24,duration:.75,ease});
+gsap.from('.cmp-wrap',{scrollTrigger:{trigger:'.cmp-sec',start:'top 80%'},opacity:0,y:24,duration:.75,ease});
+gsap.utils.toArray('.faq-it').forEach((f,i)=>gsap.from(f,{scrollTrigger:{trigger:f,start:'top 92%'},opacity:0,y:16,duration:.5,delay:i*.04,ease}));
+gsap.from('.soc-photo',{scrollTrigger:{trigger:'.soc-sec',start:'top 80%'},opacity:0,x:30,duration:.8,ease});
 </script>
 </body>
 </html>
