@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -48,7 +48,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 .nav-drop a:hover{color:var(--mint);background:rgba(0,212,196,.06)}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-socials{display:flex;align-items:center;gap:.6rem}
-.soc-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);transition:background .2s,border-color .2s,transform .18s}
+.soc-ic{width:36px;height:36px;border-radius:2px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);transition:background .2s,border-color .2s,transform .18s}
 .soc-ic:hover{transform:translateY(-2px)}
 .soc-ic.ig:hover{background:rgba(225,48,108,.2);border-color:rgba(225,48,108,.45)}
 .soc-ic.fb:hover{background:rgba(24,119,242,.2);border-color:rgba(24,119,242,.45)}
@@ -84,7 +84,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 /* COUNTY SECTIONS */
 .county-sec{background:#080808;padding:7rem 0}
 .county-sec + .county-sec{background:#0d0d0d}
-.county-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.14);padding:.3rem .9rem;border-radius:100px;margin-bottom:1.25rem}
+.county-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.14);padding:.3rem .9rem;border-radius:0;margin-bottom:1.25rem}
 .cities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2.75rem;border:1px solid rgba(255,255,255,.07)}
 .city-chip{background:#0a0a0a;border-right:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:1.25rem 1.5rem;transition:background .2s,color .2s}
 .city-chip:hover{background:rgba(0,212,196,.07)}
@@ -124,7 +124,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 .ft-bt{border-top:1px solid rgba(255,255,255,.05);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .ft-cp{font-size:.8rem;color:rgba(255,255,255,.22)}
 .ft-socials{display:flex;align-items:center;gap:.6rem}
-.ft-soc{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .2s}
+.ft-soc{width:34px;height:34px;border-radius:2px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .2s}
 .ft-soc:hover{background:rgba(255,255,255,.12)}
 
 /* RESPONSIVE */
@@ -333,3 +333,4 @@ gsap.from('.cta-glass',{scrollTrigger:{trigger:'.cta-sec',start:'top 80%'},opaci
 </script>
 </body>
 </html>
+

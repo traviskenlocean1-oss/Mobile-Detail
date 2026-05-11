@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -50,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 .nav-drop a:hover{color:var(--mint);background:rgba(0,212,196,.06)}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-socials{display:flex;align-items:center;gap:.6rem}
-.soc-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);transition:background .2s,border-color .2s,transform .18s}
+.soc-ic{width:36px;height:36px;border-radius:2px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);transition:background .2s,border-color .2s,transform .18s}
 .soc-ic:hover{transform:translateY(-2px)}
 .soc-ic.ig:hover{background:rgba(225,48,108,.2);border-color:rgba(225,48,108,.45)}
 .soc-ic.fb:hover{background:rgba(24,119,242,.2);border-color:rgba(24,119,242,.45)}
@@ -82,7 +82,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,.9);b
 .contact-left{display:flex;flex-direction:column;gap:1.5rem}
 .ci-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .ci-card{background:rgba(0,0,0,.62);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.09);border-radius:4px;padding:1.25rem .9rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.45rem}
-.ci-card-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,196,.14),rgba(72,202,228,.07));display:flex;align-items:center;justify-content:center}
+.ci-card-icon{width:42px;height:42px;border-radius:2px;background:linear-gradient(135deg,rgba(0,212,196,.14),rgba(72,202,228,.07));display:flex;align-items:center;justify-content:center}
 .ci-card-lbl{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.09em}
 .ci-card-val{font-size:.88rem;font-weight:700;color:#fff;line-height:1.3}
 .ci-card-val a{color:#fff;transition:color .2s}
@@ -130,7 +130,7 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 .ft-bt{border-top:1px solid rgba(255,255,255,.05);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .ft-cp{font-size:.8rem;color:rgba(255,255,255,.22)}
 .ft-socials{display:flex;align-items:center;gap:.6rem}
-.ft-soc{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .2s}
+.ft-soc{width:34px;height:34px;border-radius:2px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .2s}
 .ft-soc:hover{background:rgba(255,255,255,.12)}
 
 /* RESPONSIVE */
@@ -353,3 +353,4 @@ gsap.from('.ci-card',{scrollTrigger:{trigger:'.ci-row',start:'top 88%'},opacity:
 </script>
 </body>
 </html>
+
