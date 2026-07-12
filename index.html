@@ -912,7 +912,8 @@ document.getElementById('rNext').onclick=()=>{if(ri<RV.length-cpv()){ri++;shift(
 document.getElementById('rPrev').onclick=()=>{if(ri>0){ri--;shift();}};
 window.addEventListener('resize',()=>{ri=0;shift();});
 
-/* Modal */
+/* Modal — suppress when embedded in iframe (portfolio preview) */
+if (window.self !== window.top) { document.getElementById('modal').classList.add('gone'); }
 document.getElementById('mClose').onclick=()=>document.getElementById('modal').classList.add('gone');
 document.getElementById('modal').onclick=e=>{if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.add('gone');};
 
