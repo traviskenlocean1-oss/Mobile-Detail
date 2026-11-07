@@ -276,17 +276,6 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
 .ft-soc:hover{background:rgba(255,255,255,.12)}
 
 /* MODAL */
-.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(8px)}
-.modal-ov.gone{display:none}
-.modal-wrap{position:relative;max-width:500px;width:100%}
-.modal-box{background:#0d0d0d;border:1px solid rgba(255,255,255,.1);border-radius:3px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.8);animation:pop .3s ease}
-@keyframes pop{from{transform:scale(.88);opacity:0}to{transform:scale(1);opacity:1}}
-.modal-img{width:100%;height:230px;object-fit:cover}
-.modal-body{padding:2.25rem;text-align:center}
-.modal-body h2{font-size:1.45rem;font-weight:800;color:#fff;margin-bottom:.55rem}
-.modal-body p{color:rgba(255,255,255,.48);margin-bottom:1.75rem;font-size:.92rem;line-height:1.65}
-.modal-close{position:absolute;top:-.85rem;right:-.85rem;width:38px;height:38px;background:#111;border:1.5px solid rgba(255,255,255,.12);border-radius:2px;cursor:pointer;font-size:1rem;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.5);transition:background .2s}
-.modal-close:hover{background:#1a1a1a}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -323,24 +312,24 @@ footer{background:var(--black);padding:5rem 0 2.5rem;border-top:1px solid rgba(2
   .svc-band:hover{height:480px}
   .svc-band-ct{padding:1.5rem}
 }
+/* ---- CoolMint motion layer (2026-11-07): Altura letters, a polish shine, Steadfast scatter, image wipes ---- */
+.cm-ch{display:inline-block;will-change:transform}
+.cm-pre .cm-ch{opacity:0;transform:translateY(.45em) rotate(5deg);filter:blur(5px)}
+.cm-pre.cm-on .cm-ch{opacity:1;transform:none;filter:none;transition:opacity .6s,transform .9s cubic-bezier(.16,1,.3,1),filter .6s;transition-delay:calc(var(--ci) * 26ms + var(--cd,0ms))}
+.hero h1{position:relative}
+.cm-shine{display:block;position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;text-shadow:none;color:transparent;-webkit-text-fill-color:transparent;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.92) 49%,rgba(168,255,248,.9) 51%,transparent 60%);background-size:320% 100%;background-repeat:no-repeat;background-position:130% 0;-webkit-background-clip:text;background-clip:text}
+.cm-shine.go{animation:cmShine 1.5s cubic-bezier(.45,0,.2,1)}
+@keyframes cmShine{from{background-position:130% 0}to{background-position:-30% 0}}
+.svc-band.cm-w{clip-path:inset(100% 0 0 0)}
+.svc-band.cm-w.cm-in{clip-path:inset(0 0 0 0);transition:clip-path 1.05s cubic-bezier(.77,0,.18,1);transition-delay:var(--wd,0s)}
+.svc-band.cm-w .svc-band-ct{opacity:0;transform:translateY(24px)}
+.svc-band.cm-w.cm-in .svc-band-ct{opacity:1;transform:none;transition:opacity .6s,transform .8s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--wd,0s) + .45s)}
+.gal-grid-full.cm-sc .gal-it-full{will-change:transform;position:relative}
+@media (prefers-reduced-motion:reduce){.cm-pre .cm-ch{opacity:1;transform:none;filter:none}.svc-band.cm-w{clip-path:none}.svc-band.cm-w .svc-band-ct{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
-
-<!-- MODAL -->
-<div class="modal-ov" id="modal">
-  <div class="modal-wrap">
-    <div class="modal-box">
-      <img class="modal-img" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=600&h=280&q=80" alt="CoolMint Mobile Car Detailing">
-      <div class="modal-body">
-        <h2>Welcome to CoolMint Mobile Car Detailing!</h2>
-        <p>Professional detailing brought right to your location in Pembroke Pines and South Florida. Call now to book your detail.</p>
-        <a href="tel:9373031014" class="btn-p" style="display:inline-flex;justify-content:center">CALL NOW TO BOOK</a>
-      </div>
-    </div>
-    <button class="modal-close" id="mClose" aria-label="Close">&#x2715;</button>
-  </div>
-</div>
 
 <!-- NAV -->
 <nav>
@@ -913,10 +902,6 @@ document.getElementById('rNext').onclick=()=>{if(ri<RV.length-cpv()){ri++;shift(
 document.getElementById('rPrev').onclick=()=>{if(ri>0){ri--;shift();}};
 window.addEventListener('resize',()=>{ri=0;shift();});
 
-/* Modal — suppress when embedded in iframe (portfolio preview) */
-if (window.self !== window.top) { document.getElementById('modal').classList.add('gone'); }
-document.getElementById('mClose').onclick=()=>document.getElementById('modal').classList.add('gone');
-document.getElementById('modal').onclick=e=>{if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.add('gone');};
 
 /* Nav toggle */
 document.getElementById('nTog').onclick=()=>document.getElementById('nLinks').classList.toggle('open');
@@ -956,11 +941,9 @@ function toggleFaq(el){
 gsap.registerPlugin(ScrollTrigger);
 const ease='power2.out';
 gsap.from('.trust-row',{opacity:0,y:20,duration:.8,delay:.3,ease});
-gsap.from('.hero h1',{opacity:0,y:38,duration:.9,delay:.5,ease});
 gsap.from('.hero p',{opacity:0,y:20,duration:.8,delay:.72,ease});
 gsap.from('.hero-btns',{opacity:0,y:18,duration:.75,delay:.9,ease});
 gsap.from('.hero-ph',{opacity:0,y:12,duration:.7,delay:1.05,ease});
-gsap.utils.toArray('.svc-band').forEach((b,i)=>gsap.from(b,{scrollTrigger:{trigger:b,start:'top 90%'},opacity:0,y:30,duration:.65,delay:i*.06,ease}));
 gsap.utils.toArray('.why-pt').forEach((p,i)=>gsap.from(p,{scrollTrigger:{trigger:p,start:'top 90%'},opacity:0,x:-18,duration:.6,delay:i*.06,ease}));
 gsap.from('.about-img1',{scrollTrigger:{trigger:'.about-g',start:'top 82%'},opacity:0,x:-28,duration:.8,ease});
 gsap.from('.about-img2',{scrollTrigger:{trigger:'.about-g',start:'top 75%'},opacity:0,x:-18,y:18,duration:.8,delay:.15,ease});
@@ -968,13 +951,107 @@ gsap.utils.toArray('.about-txt .s-h,.about-txt .s-p,.about-pts').forEach((el,i)=
 ScrollTrigger.create({trigger:'#aboutPill',start:'top 88%',onEnter:()=>document.getElementById('aboutPill').classList.add('active')});
 ScrollTrigger.create({trigger:'#whyPill',start:'top 88%',onEnter:()=>document.getElementById('whyPill').classList.add('active')});
 gsap.from('.stat-it',{scrollTrigger:{trigger:'.stats-bar',start:'top 88%'},opacity:0,y:20,duration:.6,stagger:.08,ease});
-gsap.from('.gal-it-full',{scrollTrigger:{trigger:'.gal-grid-full',start:'top 88%'},opacity:0,duration:.5,stagger:.025,ease});
 gsap.utils.toArray('.ar-chip').forEach((c,i)=>gsap.from(c,{scrollTrigger:{trigger:c,start:'top 92%'},opacity:0,y:10,duration:.45,delay:i*.03,ease}));
 gsap.from('.cta-glass',{scrollTrigger:{trigger:'.cta-sec',start:'top 80%'},opacity:0,y:28,duration:.75,ease});
-gsap.from('.ba-wrap',{scrollTrigger:{trigger:'.ba-sec',start:'top 80%'},opacity:0,y:24,duration:.75,ease});
 gsap.from('.cmp-wrap',{scrollTrigger:{trigger:'.cmp-sec',start:'top 80%'},opacity:0,y:24,duration:.75,ease});
 gsap.utils.toArray('.faq-it').forEach((f,i)=>gsap.from(f,{scrollTrigger:{trigger:f,start:'top 92%'},opacity:0,y:16,duration:.5,delay:i*.04,ease}));
 gsap.from('.soc-photo',{scrollTrigger:{trigger:'.soc-sec',start:'top 80%'},opacity:0,x:30,duration:.8,ease});
+
+/* ---- CoolMint motion layer (2026-11-07) ---- */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), easeOut=t=>1-Math.pow(1-t,3), inOut=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+
+  /* Altura: letters arrive one by one. Gradient words keep one continuous gradient across their letters. */
+  function split(el, delayMs){
+    let i=0; const grads=[];
+    (function walk(node){
+      [...node.childNodes].forEach(c=>{
+        if(c.nodeType===1){ if(c.tagName==='BR') return; const cs=getComputedStyle(c); if(/text/.test(cs.webkitBackgroundClip||cs.backgroundClip)) grads.push(c); walk(c); return; }
+        if(c.nodeType!==3||!c.textContent.trim()) return;
+        const f=document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(tok=>{
+          if(!tok) return;
+          if(/^\s+$/.test(tok)){ f.appendChild(document.createTextNode(' ')); return; }
+          const w=document.createElement('cm-w'); w.style.display='inline-block'; w.style.whiteSpace='nowrap';
+          [...tok].forEach(ch=>{const s=document.createElement('cm-c'); s.className='cm-ch'; s.style.setProperty('--ci',i++); s.textContent=ch; w.appendChild(s);});
+          f.appendChild(w);
+        });
+        c.parentNode.replaceChild(f,c);
+      });
+    })(el);
+    el.style.setProperty('--cd',(delayMs||0)+'ms');
+    function paint(){ grads.forEach(g=>{
+      if(!g._img) g._img=getComputedStyle(g).backgroundImage;
+      g.style.background=''; const gr=g.getBoundingClientRect();
+      g.querySelectorAll('.cm-ch').forEach(ch=>{ const r=ch.getBoundingClientRect();
+        Object.assign(ch.style,{backgroundImage:g._img,backgroundSize:gr.width+'px '+gr.height+'px',backgroundPosition:(gr.left-r.left)+'px '+(gr.top-r.top)+'px',webkitBackgroundClip:'text',backgroundClip:'text',webkitTextFillColor:'transparent',color:'transparent'}); });
+      g.style.background='none';
+    }); }
+    paint(); el._paint=paint; el.classList.add('cm-pre');
+    return el;
+  }
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('cm-on'); io.unobserve(e.target); } }),{rootMargin:'0px 0px -12% 0px'});
+  (document.fonts&&document.fonts.ready||Promise.resolve()).then(()=>{
+    /* hero headline + the polish shine */
+    const h1=document.querySelector('.hero h1');
+    if(h1){
+      const shine=document.createElement('cm-s'); shine.className='cm-shine'; shine.setAttribute('aria-hidden','true'); shine.innerHTML=h1.innerHTML.replace(/<span[^>]*>|<\/span>/g,'');
+      split(h1,350); h1.appendChild(shine);
+      requestAnimationFrame(()=>requestAnimationFrame(()=>h1.classList.add('cm-on')));
+      const run=()=>{ shine.classList.remove('go'); void shine.offsetWidth; shine.classList.add('go'); };
+      setTimeout(run,1500); setInterval(()=>{ if(document.visibilityState==='visible' && h1.getBoundingClientRect().bottom>0) run(); },7000);
+    }
+    document.querySelectorAll('h2.s-h').forEach(h=>{ split(h,0); io.observe(h); });
+    let rt; addEventListener('resize',()=>{ clearTimeout(rt); rt=setTimeout(()=>document.querySelectorAll('.cm-pre').forEach(e=>e._paint&&e._paint()),150); });
+  });
+
+  /* service bands: photos wipe up into place */
+  const bands=[...document.querySelectorAll('.svc-band')];
+  bands.forEach((b,i)=>{ b.classList.add('cm-w'); b.style.setProperty('--wd',(i%2)*0.14+'s'); });
+  const bio=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('cm-in'); bio.unobserve(e.target); } }),{rootMargin:'0px 0px -15% 0px'});
+  bands.forEach(b=>bio.observe(b));
+
+  /* Steadfast: gallery shots land scattered like dropped photos, then settle into the grid as you scroll */
+  const grid=document.querySelector('.gal-grid-full');
+  if(grid){
+    grid.classList.add('cm-sc');
+    const tiles=[...grid.querySelectorAll('.gal-it-full')];
+    const seed=n=>{const x=Math.sin(n*91.7)*43758.5453;return x-Math.floor(x);};
+    tiles.forEach((t,i)=>{ t._r=(seed(i)-.5)*28; t._x=(seed(i+7)-.5)*90; t._y=60+seed(i+13)*120; t._z=1+Math.round(seed(i+3)*20); });
+    let tick=false;
+    const draw=()=>{ tick=false; const r=grid.getBoundingClientRect(), vh=innerHeight; if(r.top>vh||r.bottom<0) return;
+      const k=easeOut(clamp((vh-r.top)/(vh*0.75),0,1)), q=1-k, on=q>0.02;
+      tiles.forEach(t=>{ t.style.transform='translate3d('+(t._x*q)+'px,'+(t._y*q)+'px,0) rotate('+(t._r*q)+'deg) scale('+(.84+.16*k)+')';
+        t.style.boxShadow=on?'0 '+(18*q)+'px '+(40*q)+'px rgba(0,0,0,'+(.55*q)+')':'none'; t.style.zIndex=on?t._z:'';
+        t.style.outline=on?Math.round(6*q)+'px solid rgba(255,255,255,'+(.9*q)+')':''; t.style.outlineOffset=on?'-'+Math.round(6*q)+'px':''; });
+    };
+    addEventListener('scroll',()=>{ if(!tick){ tick=true; requestAnimationFrame(draw);} },{passive:true}); draw();
+  }
+
+  /* before/after: the handle sweeps once on its own so people see it can be dragged */
+  const wrap=document.getElementById('baWrap'), after=document.getElementById('baAfter'), handle=document.getElementById('baHandle');
+  if(wrap&&after&&handle){
+    let touched=false; ['mousedown','touchstart'].forEach(ev=>wrap.addEventListener(ev,()=>{touched=true;},{passive:true}));
+    const set=p=>{ after.style.clipPath='inset(0 '+(100-p)+'% 0 0)'; handle.style.left=p+'%'; };
+    new IntersectionObserver((es,o)=>es.forEach(e=>{ if(!e.isIntersecting) return; o.disconnect();
+      const keys=[50,78,24,50], dur=2600; let t0=0;
+      const step=now=>{ if(touched) return; if(!t0) t0=now; const t=clamp((now-t0)/dur,0,1), seg=Math.min(2,Math.floor(t*3)), lt=t*3-seg;
+        set(keys[seg]+(keys[seg+1]-keys[seg])*inOut(lt)); if(t<1) requestAnimationFrame(step); };
+      setTimeout(()=>requestAnimationFrame(step),400);
+    }),{threshold:.55}).observe(wrap);
+  }
+
+  /* stats count up once */
+  const sio=new IntersectionObserver(es=>es.forEach(e=>{ if(!e.isIntersecting) return; sio.unobserve(e.target);
+    const node=[...e.target.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent)); if(!node) return;
+    const end=parseFloat(node.textContent), dec=(node.textContent.split('.')[1]||'').length; let t0=0;
+    const step=now=>{ if(!t0) t0=now; const t=clamp((now-t0)/1400,0,1); node.textContent=(end*easeOut(t)).toFixed(dec); if(t<1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }),{threshold:.6});
+  document.querySelectorAll('.stat-num').forEach(n=>sio.observe(n));
+})();
 </script>
 </body>
 </html>
